@@ -1,5 +1,6 @@
 To do
 
+* underline current line: <http://www.vimbits.com/bits/12>, `:t. | s/./-/ | nohl`
 * add message to the install script about the vimrc.after
 * IN PROGRESS: fix ALT modifier not working at all on Mac terminals
 * fix the `date` command not working on Mac
