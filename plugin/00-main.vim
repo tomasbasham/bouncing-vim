@@ -170,7 +170,12 @@ endif
 " Ack needs to be initialised after it's options have been set, if there is no
 " ackprg and no ack executable, the ack plugin won't be loaded at all.
 if !exists(":Ack")
-  runtime bundle/ack.vim/plugin/ack.vim
+  try
+    runtime bundle/ack.vim/plugin/ack.vim
+  catch
+    " Although if everything has been installed correctly this should never
+    " happen.
+  endtry
 endif
 
 " ================
