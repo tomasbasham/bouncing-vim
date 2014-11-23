@@ -146,6 +146,8 @@ let g:ctrlp_custom_ignore = {
 " ===========
 " === Ack ===
 " ===========
+" Highlight the searched term.
+let g:ackhighlight = 1
 " launch ack without argument with leader+a
 nnoremap <Leader>a :Ack!<space>
 
@@ -163,6 +165,12 @@ endif
 
 if executable('ag')
   let g:ackprg = 'ag --nogroup --nocolor --column --ignore={log,tags}'
+endif
+
+" Ack needs to be initialised after it's options have been set, if there is no
+" ackprg and no ack executable, the ack plugin won't be loaded at all.
+if !exists(":Ack")
+  runtime bundle/ack.vim/plugin/ack.vim
 endif
 
 " ================
