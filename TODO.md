@@ -1,5 +1,7 @@
 To do
 
+* in case of issues with agnostic take a look at
+  <http://www.terminally-incoherent.com/blog/2012/10/17/vim-solarized-and-tmux/>
 * underline current line: <http://www.vimbits.com/bits/12>, `:t. | s/./-/ | nohl`
 * add message to the install script about the vimrc.after
 * IN PROGRESS: fix ALT modifier not working at all on Mac terminals
@@ -65,6 +67,9 @@ Other interesting colorschemes
 * <https://github.com/morhetz/gruvbox>
 * <https://github.com/nanotech/jellybeans.vim>
 * <https://github.com/h3rald/stash/blob/master/.vim/colors/herald.vim>
+* <http://jeetworks.org/mayansmoke/> light background
+* <https://github.com/toupeira/vim-desertink>
+* <https://github.com/reedes/vim-colors-pencil>
 
 Other interesting plugins
 -----------------------
