@@ -113,6 +113,9 @@ endif
 " http://en.wikipedia.org/wiki/Sentence_spacing#Typography
 set nojoinspaces
 
+" Align wrapped lines with the original indentation
+set breakindent
+
 " ================================
 " === Create path for new file ===
 " ================================
