@@ -1,5 +1,6 @@
 To do
 
+* wrap breakindent option in version check
 * in case of issues with agnostic take a look at
   <http://www.terminally-incoherent.com/blog/2012/10/17/vim-solarized-and-tmux/>
 * underline current line: <http://www.vimbits.com/bits/12>, `:t. | s/./-/ | nohl`
