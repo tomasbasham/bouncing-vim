@@ -114,7 +114,9 @@ endif
 set nojoinspaces
 
 " Align wrapped lines with the original indentation
-set breakindent
+if version >= 704
+  set breakindent
+endif
 
 " ================================
 " === Create path for new file ===
