@@ -2,6 +2,7 @@ To do
 
 * fix breakindent by wrapping in try/catch, since version is not enough
 * add script for gnome terminal colors (both solarized and agnostic)
+* use cmd c/s on, is it even possible
 * in case of issues with agnostic take a look at
   <http://www.terminally-incoherent.com/blog/2012/10/17/vim-solarized-and-tmux/>
 * underline current line: <http://www.vimbits.com/bits/12>, `:t. | s/./-/ | nohl`
