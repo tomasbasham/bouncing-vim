@@ -1,5 +1,6 @@
 To do
 
+* prevent buffer switching from jumping to/reusing existing one
 * fix breakindent by wrapping in try/catch, since version is not enough
 * add script for gnome terminal colors (both solarized and agnostic)
 * use cmd c/s on, is it even possible
