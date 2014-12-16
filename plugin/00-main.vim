@@ -142,6 +142,7 @@ command -bang -bar -nargs=? -complete=file EP :call s:MKDir(<f-args>) | e<bang> 
 
 " Taken from CtrlP documentation
 let g:ctrlp_show_hidden = 1
+let g:ctrlp_switch_buffer = 0
 let g:ctrlp_custom_ignore = {
   \ 'dir': '\v[\/]\.*(git|hg|svn|bundle|bin|bbin)$',
   \ 'file': '\v\.(exe|so|dll|class|pyc)$',
