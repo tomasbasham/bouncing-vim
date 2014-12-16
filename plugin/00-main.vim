@@ -193,6 +193,7 @@ map <Leader>f :NERDTreeFind<CR>
 " http://superuser.com/questions/184844/hide-certain-files-in-nerdtree
 let NERDTreeIgnore = ['\.pyc$', '\.class$']
 let NERDTreeMinimalUI=1
+let NERDTreeAutoDeleteBuffer=1 " remove buffer when file is deleted/moved
 " let NERDTreeMouseMode=2 " single click to toggle dirs, dblclick to open files
 " let NERDTreeQuitOnOpen=1 " avoid clutter, close NERDTree after opening a file
 
