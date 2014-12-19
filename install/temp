@@ -24,6 +24,10 @@ for plugin in ${ESSENTIALS[@]}; do
   echo "  - ${plugin}"
 done
 
+for plugin in ${NICE_TO_HAVES[@]}; do
+  echo "  - ${plugin}"
+done
+
 echo
 echo "Do you want to proceed?"
 read -r
@@ -40,5 +44,9 @@ but it is not installed. Exiting now."
 fi
 
 for plugin in ${ESSENTIALS[@]}; do
+  install_tmp_plugin_with_pathogen "${plugin}"
+done
+
+for plugin in ${NICE_TO_HAVES[@]}; do
   install_tmp_plugin_with_pathogen "${plugin}"
 done

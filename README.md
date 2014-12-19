@@ -75,8 +75,8 @@ This can be useful when installing from scripts. You will need to pass the
 path to the home directory in this case.
 
 To install only the essentials, and only temporarily:
-* install with: `./vim-scripts/tmp-plugins-install`.
-* remove with: `./vim-scripts/tmp-plugins-remove`.
+* install with: `./install/temp`.
+* remove with: `./install/remove-temp`.
 
 ### <a name="essential-plugins"></a>Essentials
 
@@ -152,8 +152,8 @@ in a `~/.vimrc.after` file that will be loaded automatically.
 
 *Temporary install*:
 
-- run `./vim-scripts/tmp-plugins-install` at the beginning of the pairing session
-- run `./vim-scripts/tmp-plugins-remove` when finished
+- run `./install/temp` at the beginning of the pairing session
+- run `./install/remove-temp` when finished
 
 In both cases:
 
