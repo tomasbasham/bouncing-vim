@@ -60,7 +60,7 @@ Content
 ## <a name="plugins-list"></a>Third party plugins
 
 Install all the essential plugins with:
-`./vim-scripts/install-plugins`
+`./install/essential`
 
 Install all the plugins (including the nice-to-have's) with:
 `./vim-scripts/install-plugins-with-nice-to-haves`
@@ -119,7 +119,7 @@ Colorschemes
 
 ### <a name="nice-to-have-plugins"></a>Nice-to-have's
 
-These are only installed when running the full install: `./vim-scripts/install-plugins`
+These are only installed when running the full install: `./install/essential`
 
 * [Coffeescript] (https://github.com/kchmck/vim-coffee-script) - Adds
   CoffeeScript support to Vim. It covers syntax, indenting, compiling, and more.
@@ -170,9 +170,7 @@ export EDITOR='/usr/bin/vim'
 
 ### <a name="install-vim-plugins"></a>Install the Vim plugins (with pathogen)
 
-The list of essential and nice-to-have plugins is in `./vim-script/plugins`.
-
-*Full install*: run `./vim-scripts/install-plugins`.
+*Full install*: run `./install/essential`.
 
 You will be prompted to use the provided `vimrc` and `tmux.conf`, your files
 will be backed up.
