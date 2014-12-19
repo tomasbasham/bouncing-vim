@@ -264,7 +264,9 @@ cd -; \
   - toggle with `<leader>n`
   - jump to the current buffer with `<leader>f` (as in "find...")
   - ignored compiled files
+  - show hidden files by default
   - use minimal UI
+  - disable prompt to delete buffer when a file is removed
   - prevent NERDTree from opening a buffer in a new split by mistake
 
 * **vimux**
