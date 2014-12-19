@@ -103,3 +103,9 @@ Other interesting plugins
 * <https://github.com/terryma/vim-multiple-cursors>
 * <https://github.com/tomtom/tcomment_vim>
 * ssh://hg@bitbucket.org/ns9tks/vim-fuzzyfinder
+
+Interesting tmux configurations
+-------------------------------
+
+- <http://zanshin.net/2013/09/05/my-tmux-configuration/>
+- <https://github.com/chrishunt/dot-files/blob/master/.tmux.conf>
