@@ -115,7 +115,11 @@ set nojoinspaces
 
 " Align wrapped lines with the original indentation
 if version >= 704
-  set breakindent
+  try
+    set breakindent
+    runtime bundle/ack.vim/plugin/ack.vim
+  catch
+  endtry
 endif
 
 " ================================

@@ -347,6 +347,8 @@ cd -; \
   - remove the comment symbols when joining lines with `J`
   - only use one space after punctation ([wiki] (http://en.wikipedia.org/wiki/Sentence_spacing#Typography))
 
+* Enable breakindent if supported by the vim version.
+
 * Use 2-space soft tabs by defaults (it's overridden for some some languages
   with different conventions).
 
