@@ -67,7 +67,7 @@ Install all the essential plugins with:
 `./install/essential`
 
 Install all the plugins (including the nice-to-have's) with:
-`./vim-scripts/install-plugins-with-nice-to-haves`
+`./install/full`
 
 To install without prompts, use `./install/essential-noprompt` or
 `./install/full-noprompt`.

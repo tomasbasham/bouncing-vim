@@ -7,7 +7,7 @@ CURRDIR=$(cd "$(dirname $0)" && pwd -P)
 source "${CURRDIR}/utils.sh"
 source "${CURRDIR}/vim-plugin-list.sh"
 
-"${CURRDIR}/install-plugins"
+"${CURRDIR}/essential"
 
 for plugin in ${NICE_TO_HAVES[@]}; do
   install_plugin_with_pathogen "$plugin"
