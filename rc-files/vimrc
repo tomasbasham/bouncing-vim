@@ -11,58 +11,7 @@ filetype plugin indent on
 " === Colorscheme ===
 " ===================
 
-" set the TERM to 'screen-256color' in the .bashrc:
-" This will break 16-color colorschemes, but will make solarized work
-" correctly, including the statusbar.
-"
-"   if [[ -n "$TMUX" ]]; then
-"     export TERM=screen-256color
-"   else
-"     export TERM=xterm-256color
-"   fi
-
-" " Disable Background Color Erase (BCE) so that color schemes
-" " work properly when Vim is used inside tmux and GNU screen.
-" " See also http://snk.tuxfamily.org/log/vim-256color-bce.html
-" if &term =~ '256color'
-"   set t_ut=
-" endif
-
-" set background=dark
-" let g:molokai_original = 1
-" colorscheme molokai
-
-" colorscheme noctu
-
-" colorscheme base16-default
-
-" colorscheme default
-
 colorscheme agnostic
-
-" =============================
-" === Solarized colorscheme ===
-" =============================
-
-" Force solarized display sensibly when the terminal emulator has a custom
-" palette.
-" These can be avoided if the terminal emulator has solarized palette.
-" Use t_Co=16 instead if the terminal has a 16 solarized palette.
-" set t_Co=256
-" let g:solarized_termcolors=256
-" let g:solarized_termcolors=16
-" set term=screen-256color " try this as a last resort
-
-""" -> Uncomment the following two lines for 16-color terminal solarized
-" set background=dark " or light
-" colorscheme solarized
-""" -> Additional solarized options for 256-colors
-" let g:solarized_underline=0
-" let g:solarized_italic=0
-" let g:solarized_bold=0
-" let g:solarized_contrast="high"
-" let g:solarized_visibility="high"
-" let g:solarized_termtrans=1 " transparent terminal support
 
 " ====================
 " === .vimrc.after ===
