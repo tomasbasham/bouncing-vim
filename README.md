@@ -95,9 +95,6 @@ in your `~/.bashrc` or `~/.bash_profile`:
 
     export EDITOR='vim'
 
-Also see [read and write options](#read-write-options) if you want to enable
-quick save with `CTRL-s`.
-
 #### 256 colours in tmux
 
 To support 256-color colorschemes in tmux, put this in your `~/.bashrc`
@@ -428,14 +425,11 @@ The `ALT+d` (or `<leader>d`) shortcut provided to do real deletion
 
 * Quick save with `CTRL-s`. This is a very useful feature, albeit a
   controversial one. <br>
-  See [Ben Orenstein's talk] (http://www.youtube.com/watch?v=SkdrYWhh-8s)
-  on why it's a good idea.
+  See [Ben Orenstein's talk](http://www.youtube.com/watch?v=SkdrYWhh-8s)
+  on why that's a good idea.
 
   As some terminals use `CTRL-s` to suspend the output stream, this requires
-  additional setup.
-
-  It's possible to avoid this, see "Integration with the terminal" in this
-  readme for how to do this.
+  additional setup, see "Integration with the terminal" for how to do this.
 
 * Write with sudo with `:Sudow`.
 
@@ -463,7 +457,7 @@ The `ALT+d` (or `<leader>d`) shortcut provided to do real deletion
 People have different habits and opinions when it comes to search within
 multiple files.
 
-ack.vim is very popular but not with everyone due the need to install or
+ack.vim is very popular but not with everyone, due the need to install or
 compile additional packages.
 
 Sometimes the plugins ack.vim or fugitive (which provides `:Ggrep`) are not
@@ -500,27 +494,23 @@ window or pane.
 Example: to run the tests in the second pane of the first tmux window,
 enter the following in the Vim prompt:
 
-  :Silent tmux send-keys -t 1.2 "bundle exec rspec spec/my_spec.rb" C-m
+    :Silent tmux send-keys -t 1.2 "bundle exec rspec spec/my_spec.rb" C-m
 
 ### Tmux integration
 
-A tmux.conf file is provided: `./rc-files/tmux.conf`.
-
-The tmux installation script will prompt to link to it.
-
-See [Tmux configuration notes](#tmux-conf-notes) for the required configuration
-in `.tmux.conf`.
+See the installation notes to use the provided `.tmux.conf` or copy the
+recommended sections to your own.
 
 * Fix keycodes
   - tmux will send xterm-style keys when its xterm-keys option is on
   - this requires `set -g xterm-keys on` in the `~/.tmux.conf`
   - fix `CTRL-Page<Up/Down>` (this is required for tab-like navigation
-  between buffers)
+    between buffers)
   - fix `<Home>` key
   - fix modifiers (like `CTRL-Right/Left`, `ALT-Up/Down/Left/Right`...)
 
-* Seamless navigation between tmux and Vim with `ALT-Up/Down/Left/Right`
-and `ALT-k/j/h/l`.<br>
+* Seamless navigation between tmux and Vim with `ALT-Up/Down/Left/Right` and
+  `ALT-k/j/h/l`.
 
 ### View options
 
@@ -566,7 +556,8 @@ and `ALT-k/j/h/l`.<br>
 
 * Toggle trailing whitespace highlighting with `<leader>w` (off by default).
 
-* Remove trailing whitespace on save, to avoid false conflicts in version control:
+* Remove trailing whitespace on save, to avoid false conflicts in version
+  control:
   - only for specified filetypes (see `./plugin/whitespace.vim`)
   - ensure no whitespace at the end of lines
   - ensure exactly one newline character at the end of file
@@ -579,5 +570,5 @@ and `ALT-k/j/h/l`.<br>
 
 * Disable unsafe commands in local vimrc files.
 
-* Additional configuration can be put in `~/.vimrc.after` that will be
-loaded automatically if present.
+* Additional configuration can be put in `~/.vimrc.after` that will be loaded
+  automatically if present.
