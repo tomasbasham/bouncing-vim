@@ -1,7 +1,7 @@
 To do
 
+* add info about the colours in the readme
 * use proper version checking for breakindent when vim 7.5 is released
-* include the nice-to-haves in the temporary install
 * add script for gnome terminal colors (both solarized and agnostic)
 * use cmd c/s on mac, is it even possible?
 * in case of issues with agnostic take a look at

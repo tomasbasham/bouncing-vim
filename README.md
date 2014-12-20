@@ -8,7 +8,7 @@ integrated with tmux, that...
 * provides additional features and shortcuts...
 * ...but tries not to remove or override native Vim features and popular setups
 
-## Why [pathogen.vim](https://github.com/tpope/vim-pathogen)?
+### Why [pathogen.vim](https://github.com/tpope/vim-pathogen)?
 
 It uses [pathogen.vim](https://github.com/tpope/vim-pathogen), because pathogen
 is "file system-driven", which unlike other loading tools does not require to
@@ -16,69 +16,124 @@ modify any file to add more vim plugins.
 
 This has two practical advantages:
 
-- if you are already using pathogen, this distro can be considered an extension
+* if you are already using pathogen, this distro can be considered an extension
   of your existing setup
-- if someone is pairing with you and would like to use bouncing-vim only
+
+* if someone is pairing with you and would like to use bouncing-vim only
   for the pairing session, it can easily installed and removed with a couple
   of commands
 
-## Credits
+### Credits
 
 Credits are given in the form of links to the original source.
 Thanks to the great Vim community and to the many authors of the features.
 
-Content
--------
+Installing
+----------
 
-* [Third party plugins](#plugins-list)
-  - [Essentials](#essential-plugins)
-  - [Nice-to-have's](#nice-to-have-plugins)
-* [Installing](#installing)
-  - [Install the Vim plugins (with pathogen)](#install-vim-plugins)
-  - [Install tmux 1.9 from source (only Ubuntu)](#install-tmux-source-ubuntu)
-  - [Tmux configuration notes](#tmux-conf-notes)
-  - [Updating existing Vim plugins](#update-existing-plugins)
-* [Features](#features)
-  - [Third party plugins setup](#third-party-plugins-setup)
-  - [Language specific settings](#language-specific-settings)
-  - [Miscellaneous options](#miscellaneous-options)
-  - [Miscellaneous mappings](#miscellaneous-mappings)
-  - [Navigation](#navigation)
-  - [Mouse support](#mouse-support)
-  - [Anti-typo command aliases](#anti-typo-aliases)
-  - [Last position in file](#last-position-in-file)
-  - [Bubbling lines](#bubbling-lines)
-  - [Buffer enhancements](#buffer-enhancements)
-  - [Clipboard](#clipboard)
-  - [Real delete](#real-delete)
-  - [Current directory](#current-directory)
-  - [Read and write options](#read-write-options)
-  - [Search features](#search-features)
-  - [Run shell command without prompting](#shell-commands-without-prompt)
-  - [Tmux integration](#tmux-integration)
-  - [View options](#view-options)
-  - [Statusbar](#statusbar-options)
-  - [Whitespace](#whitespace-options)
-  - [`vimrc` options](#vimrc-options)
+### Guided install
 
-## <a name="plugins-list"></a>Third party plugins
+Install all the plugins (including the nice-to-have's) with: `./install/full`.
 
-Install all the essential plugins with:
-`./install/essential`
+Install the essential plugins with: `./install/essential`.
 
-Install all the plugins (including the nice-to-have's) with:
-`./install/full`
+In both cases you will be prompted for choices.
 
-To install without prompts, use `./install/essential-noprompt` or
-`./install/full-noprompt`.
+Using the provided rc files is recommended, to get the most out of the
+integration between vim and tmux. The original files will be backed
+up if present.
+
+If you use the provided `.vimrc` and you want to further customize the
+configuration (the colorscheme for example), please put it in `~/.vimrc.after`,
+which will be loaded automatically.
+
+If you don't want to use the provided `.tmux.conf`, it's recommended that you
+copy the recommended section into your own `.tmux.conf`.
+
+### Fast install
+
+If you are happy with the defaults and want to install without prompts, use
+`./install/full-noprompt` or `./install/essential-noprompt`.
+
 This can be useful when installing from scripts. You will need to pass the
 path to the home directory in this case.
 
-To install only the essentials, and only temporarily:
-* install with: `./install/temp`.
-* remove with: `./install/remove-temp`.
+### Temporary install
 
-### <a name="essential-plugins"></a>Essentials
+Useful if you want to use bouncing-vim for a single pairing session.
+
+* Install with: `./install/temp`.
+* Remove with: `./install/remove-temp`.
+
+In both cases:
+
+* the plugins will be cloned from github into `~/.vim/bundle/`
+* existing plugins will be skipped (based on the name of the github repo)
+
+### Updating existing Vim plugins
+
+You can use the following oneliner.
+
+    cd ~/.vim/bundle && { \
+    find * -maxdepth 0 -type d | \
+      while read repo; do \
+        echo "---- $repo ----"; \
+        cd $repo; \
+          git pull origin master; \
+          cd ..; \
+        echo; \
+      done; \
+    cd -; \
+    }
+
+### Integration with the terminal
+
+#### Use vim as default editor
+
+It's useful to set Vim as default editor. If you wish to do so, put this
+in your `~/.bashrc` or `~/.bash_profile`:
+
+    export EDITOR='vim'
+
+Also see [read and write options](#read-write-options) if you want to enable
+quick save with `CTRL-s`.
+
+#### 256 colours in tmux
+
+To support 256-color colorschemes in tmux, put this in your `~/.bashrc`
+or `~/.bash_profile`:
+
+    if [[ -n "$TMUX" ]]; then
+      export TERM=screen-256color
+    else
+      export TERM=xterm-256color
+    fi
+
+#### Pass Ctrl-S and Ctrl-Q through
+
+Put this in your bash profile to bypass the key combination only from Vim:
+
+    vim() {
+      local STTYOPTS="$(stty --save)"
+      # Prevent CTRL-S from suspending the output stream
+      stty stop '' -ixoff
+      # Prevent CTRL-Q from waking up the output stream
+      stty start '' -ixon
+      command vim "$@"
+      stty "$STTYOPTS"
+    }
+
+To always bypass these keys one can simply add this instead:
+
+    # Prevent CTRL-S from suspending the output stream
+    stty stop '' -ixoff
+    # Prevent CTRL-Q from waking up the output stream
+    stty start '' -ixon
+
+List of included plugins
+------------------------
+
+### Essentials
 
 Functionality
 
@@ -106,7 +161,7 @@ Colorschemes
 * [Agnostic] (https://github.com/ygt-mikekchar/agnostic) - A Vim colour scheme that allows to choose your own colours.
 * [Solarized] (https://github.com/altercation/vim-colors-solarized) - Precision colors for machines and people.
 
-### <a name="nice-to-have-plugins"></a>Nice-to-have's
+### Nice-to-have's
 
 These are only installed when running the full install: `./install/essential`
 
@@ -129,122 +184,10 @@ Colorschemes:
 * [Base16] (https://github.com/chriskempson/base16-vim) - Color schemes for hackers.
 * [Molokai] (https://github.com/tomasr/molokai) - A Vim port of the monokai theme for TextMate.
 
-## <a name="installing"></a>Installing
+Features
+--------
 
-It's useful to set Vim as default editor. If you wish to do so, put this
-in your `~/.bashrc` or `~/.bash_profile`:
-
-```sh
-# ~/.bashrc
-
-export EDITOR='/usr/bin/vim'
-```
-
-### <a name="install-vim-plugins"></a>Install the Vim plugins (with pathogen)
-
-*Full install*: run `./install/essential`.
-
-You will be prompted to use the provided `vimrc` and `tmux.conf`, your files
-will be backed up.
-
-If you chose to link to the `vimrc`, you can still add custom configuration
-in a `~/.vimrc.after` file that will be loaded automatically.
-
-*Temporary install*:
-
-- run `./install/temp` at the beginning of the pairing session
-- run `./install/remove-temp` when finished
-
-In both cases:
-
-- the plugins will be cloned from github into `~/.vim/bundle/`
-- existing plugins will be skipped (based on the name of the github repo)
-
-Also see [read and write options] (#read-write-options) if you want to enable
-quick save with `CTRL-s`.
-
-### <a name="tmux-conf-notes"></a>Tmux configuration notes
-
-If you prefer to keep your own tmux.conf, it is recommended, to make the most
-out of the Vim+tmux combinations, to copy at least the following sections to
-the local tmux.conf (also available in the file `./rc-files/tmux.conf`):
-
-A combination of settings is required in bashrc and tmux.conf. Try different
-ones to find out which is more suitable to your workflow.
-
-To support correct solarized colors in tmux, put this in your `~/.bashrc`
-or `~/.bash_profile`:
-
-```sh
-# ~/.bashrc or ~/.bash_profile
-
-if [[ -n "$TMUX" ]]; then
-  export TERM=screen-256color
-else
-  export TERM=xterm-256color
-fi
-```
-
-However this breaks 16-color colorschemes, so you will probably want to enable
-or disable this as needed.
-
-Ideally if you use vim inside tmux you won't need this, and you should also
-remove the tmux option `default-terminal "screen-256color"`.
-
-```sh
-# ~/.tmux.conf
-
-# === Terminal compatibility ===
-
-# Use 256 term for pretty colors
-set -g default-terminal "screen-256color" # breaks solarized, not 16-color colorschemes
-set -g terminal-overrides 'xterm:colors=256'
-
-# Pass the keys through, especially necessary to make full use of native vim
-# keymappings.
-set -g xterm-keys on
-
-# === Quick swtiching between windows ===
-
-bind-key -n C-Space     select-window -t :+
-bind-key -n M-PageDown  select-window -t :+
-bind-key -n M-PageUp    select-window -t :-
-
-# === Navigation between vim and tmux ===
-
-# M(eta) is the Alt key both in Vim and tmux.
-bind -n M-Left  run "(tmux display-message -p '#{pane_current_command}' | grep -iq vim && tmux send-keys M-Left)  || tmux select-pane -L"
-bind -n M-Down  run "(tmux display-message -p '#{pane_current_command}' | grep -iq vim && tmux send-keys M-Down)  || tmux select-pane -D"
-bind -n M-Up    run "(tmux display-message -p '#{pane_current_command}' | grep -iq vim && tmux send-keys M-Up)    || tmux select-pane -U"
-bind -n M-Right run "(tmux display-message -p '#{pane_current_command}' | grep -iq vim && tmux send-keys M-Right) || tmux select-pane -R"
-
-bind -n M-h run "(tmux display-message -p '#{pane_current_command}' | grep -iq vim && tmux send-keys M-Left)  || tmux select-pane -L"
-bind -n M-j run "(tmux display-message -p '#{pane_current_command}' | grep -iq vim && tmux send-keys M-Down)  || tmux select-pane -D"
-bind -n M-k run "(tmux display-message -p '#{pane_current_command}' | grep -iq vim && tmux send-keys M-Up)    || tmux select-pane -U"
-bind -n M-l run "(tmux display-message -p '#{pane_current_command}' | grep -iq vim && tmux send-keys M-Right) || tmux select-pane -R"
-```
-
-### <a name="update-existing-plugins"></a>Updating existing Vim plugins
-
-Updating all the Vim plugins can be done with this oneliner:
-
-```sh
-cd ~/.vim/bundle && { \
-find * -maxdepth 0 -type d | \
-  while read repo; do \
-    echo "---- $repo ----"; \
-    cd $repo; \
-      git pull origin master; \
-      cd ..; \
-    echo; \
-  done; \
-cd -; \
-}
-```
-
-## <a name="features"></a>Features
-
-### <a name="third-party-plugins-setup"></a>Third party plugins setup
+### Third party plugins setup
 
 * **CtrlP**
   - include hidden files in the results
@@ -291,7 +234,7 @@ cd -; \
   - focus the buffer list with `<leader>t`
   - toggle the buffer list with `<leader>m`
 
-### <a name="language-specific-settings"></a>Language specific settings
+### Language specific settings
 
 * **Java**
   - soft tab with 4 spaces
@@ -312,7 +255,7 @@ cd -; \
   - see setup of the Vim Ruby plugin
   - see setup of the xmpfilter plugin
 
-### <a name="miscellaneous-options"></a>Miscellaneous options
+### Miscellaneous options
 
 * Reduce the timeout required to recognize a command from 1000 ms (the default)
   to 350 ms.
@@ -328,7 +271,7 @@ cd -; \
 
 * Omni-completion is enabled (use the native `<C-x><C-o>` to invoke it).
 
-### <a name="miscellaneous-mappings"></a>Miscellaneous mappings
+### Miscellaneous mappings
 
 * Add a new line without going to insert mode (experimental):
   - `ALT-O` or `<leader>o`: below
@@ -357,7 +300,7 @@ fix the keycode for ALT-I on Mac: these mappings may be removed or changed.
 * Disable activating ex-mode when typing `Q` in normal mode. This is almost
   always a typo, and it's been set to no-op, reserving it for future use.
 
-### <a name="navigation"></a>Navigation
+### Navigation
 
 * Arrows are enabled to accommodate users that have different styles of
   usage.
@@ -375,21 +318,21 @@ fix the keycode for ALT-I on Mac: these mappings may be removed or changed.
 * Quickfix list
   - go to the next with `]q`, to the previous with `[q`
 
-### <a name="mouse-support"></a>Mouse support
+### Mouse support
 
 Mouse features are fully enabled.
 
-### <a name="anti-typo-aliases"></a>Anti-typo command aliases
+### Anti-typo command aliases
 
 Some commands like `:w`, `:q` and similar have been aliased with the upper
 case version to account for common misspellings.
 
-### <a name="last-position-in-file"></a>Last position in file
+### Last position in file
 
-Reopening a file the cursor will jump to the position where it was the last
-time the buffer was opened.
+When reopening a file, the cursor will jump to the position where it was the
+last time the buffer was opened.
 
-### <a name="bubbling-lines"></a>Bubbling lines
+### Bubbling lines
 
 Quickly move lines up and down with `CTRL+ArrowUp/Down` and `CTRL+k/j`.
 
@@ -400,13 +343,13 @@ Keycode fixes are provided for this to work in Tmux as well.
 Note: this doesn't interfere with the copy and cut operations because it uses
 the `move` command.
 
-### <a name="buffer-enhancements"></a>Buffer enhancements
+### Buffer enhancements
 
 * Reuse a buffer if a file is already open.
 
 * Switch between buffers with the same shortcuts used for tabs, for example
   in Chrome: `CTRL+PageUp/PageDown`;<br>
-  on those machines where that doesn't work, `<leader>+[` and `<leader>+]` can
+  on those machines where that doesn't work (Mac), `<leader>+[` and `<leader>+]` can
   be used.
 
 * Quick close the current buffer without closing its window with `CTRL+q`, or
@@ -436,7 +379,7 @@ the `move` command.
 * CtrlP buffer list: open with `<leader>b`. It might replace buffergator
   in the future.
 
-### <a name="clipboard"></a>Clipboard
+### Clipboard
 
 * Yank to the end of the line with `Y`, to make it consistent with `C` and `D`.
   This was removed from sensible.vim.
@@ -456,7 +399,7 @@ the `move` command.
   replacing the content of the register.
   This allows to paste multiple times the same text.
 
-### <a name="real-delete"></a>Real delete
+### Real delete
 
 Vim conflates the two functionalities of deleting and cutting.
 
@@ -466,14 +409,14 @@ The `ALT+d` (or `<leader>d`) shortcut provided to do real deletion
 * current line in normal mode
 * selection in visual mode
 
-### <a name="current-directory"></a>Current directory
+### Current directory
 
 * Expand `%%` to the current directory in the command prompt.
 
 * Set the working directory to the directory of the current file with
 `<leader>cd`.
 
-### <a name="read-write-options"></a>Read and write options
+### Read and write options
 
 * As version control is effectively ubiquitous, the following are disabled
   - backup files
@@ -488,35 +431,15 @@ The `ALT+d` (or `<leader>d`) shortcut provided to do real deletion
   See [Ben Orenstein's talk] (http://www.youtube.com/watch?v=SkdrYWhh-8s)
   on why it's a good idea.
 
-  As most terminals use `CTRL-s` to suspend the output stream, this requires
+  As some terminals use `CTRL-s` to suspend the output stream, this requires
   additional setup.
 
-  Put this in your bash profile to bypass the key combination only from Vim:
+  It's possible to avoid this, see "Integration with the terminal" in this
+  readme for how to do this.
 
 * Write with sudo with `:Sudow`.
 
-```sh
-vim() {
-  local STTYOPTS="$(stty --save)"
-  # Prevent CTRL-S from suspending the output stream
-  stty stop '' -ixoff
-  # Prevent CTRL-Q from waking up the output stream
-  stty start '' -ixon
-  command vim "$@"
-  stty "$STTYOPTS"
-}
-```
-
-  To always bypass these keys one can simply add this instead:
-
-```sh
-# Prevent CTRL-S from suspending the output stream
-stty stop '' -ixoff
-# Prevent CTRL-Q from waking up the output stream
-stty start '' -ixon
-```
-
-### <a name="search-features"></a>Search features
+### Search features
 
 * Highlight current word or selection with `<leader>h` (that is, search
   without jumping to the next found occurrence).
@@ -569,7 +492,7 @@ Plans for these features:
 - add the capability to seach for the visually selected text to both `:G` and `:GG`
 - make the `vimgrep` helper more fault-tolerant
 
-### <a name="shell-commands-without-prompt"></a>Run shell command without prompting
+### Run shell command without prompting
 
 This is especially useful when one wants to run a command in a diffent tmux
 window or pane.
@@ -577,11 +500,9 @@ window or pane.
 Example: to run the tests in the second pane of the first tmux window,
 enter the following in the Vim prompt:
 
-```vim
-:Silent tmux send-keys -t 1.2 "bundle exec rspec spec/my_spec.rb" C-m
-```
+  :Silent tmux send-keys -t 1.2 "bundle exec rspec spec/my_spec.rb" C-m
 
-### <a name="tmux-integration"></a>Tmux integration
+### Tmux integration
 
 A tmux.conf file is provided: `./rc-files/tmux.conf`.
 
@@ -601,7 +522,7 @@ in `.tmux.conf`.
 * Seamless navigation between tmux and Vim with `ALT-Up/Down/Left/Right`
 and `ALT-k/j/h/l`.<br>
 
-### <a name="view-options"></a>View options
+### View options
 
 * Disable all bells.
 
@@ -630,7 +551,7 @@ and `ALT-k/j/h/l`.<br>
 * Display vertical rulers at column 81 and 101 as a reference for keeping lines
   of code at an acceptable length.
 
-### <a name="statusbar-options"></a>Statusbar
+### Statusbar
 
 * Show the commands that are being executed.
 
@@ -641,7 +562,7 @@ and `ALT-k/j/h/l`.<br>
 * For specific colorschemes: Highlight the statuslines when in insert mode.
   (currently solarized only).
 
-### <a name="whitespace-options"></a>Whitespace
+### Whitespace
 
 * Toggle trailing whitespace highlighting with `<leader>w` (off by default).
 
@@ -650,7 +571,7 @@ and `ALT-k/j/h/l`.<br>
   - ensure no whitespace at the end of lines
   - ensure exactly one newline character at the end of file
 
-### <a name="vimrc-options"></a>`vimrc` options
+### `vimrc` options
 
 * Source automatically `.vimrc` and `.vimrc.after` on save.
 

@@ -75,7 +75,9 @@ link_rcfile \
   "vimrc" \
   "
 NOTE: Make sure your vimrc initializes pathogen.
-You can also create a ~/.vimrc.after that will be loaded automatically."
+If you change your mind and want to use the included vimrc, just rerun the
+install script: you will still be able to customise your setup with a
+~/.vimrc.after that will be loaded automatically."
 
 # =================
 # === tmux.conf ===
@@ -83,7 +85,9 @@ You can also create a ~/.vimrc.after that will be loaded automatically."
 
 link_rcfile \
   "tmux.conf" \
-  "NOTE: Make sure you add the required configuration. See the README."
+  "
+NOTE: Make sure you add the recommended configuration. See the provided
+tmux.conf."
 
 # =======================
 # === Install plugins ===
