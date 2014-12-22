@@ -5,7 +5,7 @@ set -e
 CURRDIR=$(cd "$(dirname $0)" && pwd -P)
 
 source "${CURRDIR}/utils.sh"
-source "${CURRDIR}/vim-plugin-list.sh"
+source "${CURRDIR}/config.sh"
 
 is_a_clean_install=false
 

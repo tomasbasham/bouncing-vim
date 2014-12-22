@@ -5,7 +5,7 @@ set -e
 CURRDIR=$(cd "$(dirname $0)" && pwd -P)
 
 source "${CURRDIR}/utils.sh"
-source "${CURRDIR}/vim-plugin-list.sh"
+source "${CURRDIR}/config.sh"
 
 echo "
 This script allows you to install some plugins temporarily, for

@@ -2,25 +2,14 @@
 
 set -e
 
-CURRDIR=$(cd "$(dirname $0)" && pwd -P)
-
 HOME_DIR=$1
+CURRDIR=$(cd "$(dirname $0)" && pwd -P)
+source "${CURRDIR}/config.sh"
 
-if [[ -z "${HOME_DIR}" ]]; then
-  echo "The home dir must be passed, aborting."
-  exit 1
-fi
-
-source "${CURRDIR}/utils.sh"
-source "${CURRDIR}/vim-plugin-list.sh"
-
-ensure_vim_dir_structure
-
-install_pathogen
-
-ln -sfv "${HOME_DIR}/.vim/bundle/bouncing-vim/rc-files/vimrc" "${HOME_DIR}/.vimrc"
-ln -sfv "${HOME_DIR}/.vim/bundle/bouncing-vim/rc-files/tmux.conf" "${HOME_DIR}/.tmux.conf"
+"${CURRDIR}/_noprompt-common" "${HOME_DIR}"
 
 for github_project in ${ESSENTIALS[@]}; do
   clone_to_bundle_with_home "${github_project}" "${HOME_DIR}"
 done
+
+echo $NO_PROMPT_FINAL_MESSAGE

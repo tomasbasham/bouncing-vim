@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+set -e
+
+CURRDIR=$(cd "$(dirname $0)" && pwd -P)
+
+HOME_DIR=$1
+
+if [[ -z "${HOME_DIR}" ]]; then
+  echo "The home dir must be passed, aborting."
+  exit 1
+fi
+
+source "${CURRDIR}/utils.sh"
+
+ensure_vim_dir_structure
+
+install_pathogen
+
+backup_copy "${HOME_DIR}/.vimrc"
+ln -sfv "${HOME_DIR}/.vim/bundle/bouncing-vim/rc-files/vimrc" "${HOME_DIR}/.vimrc"
+
+backup_copy "${HOME_DIR}/.tmux.conf"
+ln -sfv "${HOME_DIR}/.vim/bundle/bouncing-vim/rc-files/tmux.conf" "${HOME_DIR}/.tmux.conf"

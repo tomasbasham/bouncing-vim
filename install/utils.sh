@@ -8,12 +8,22 @@ utc_timestamp () {
   date -u -d "today" +"%Y%m%dT%H%M%SZ"
 }
 
+backup_copy() {
+  original_fullpath=$1
+  bkp_path="${original_fullpath}.$(utc_timestamp).bkp"
+
+  if [[ -e "${original_fullpath}" && ! -L "${original_fullpath}" ]]; then
+    printf "[move] " && mv -v "${original_fullpath}" "${bkp_path}"
+  else
+    echo "No existing version of ${original_fullpath} to backup."
+  fi
+}
+
 link_rcfile () {
   local rcfile=$1
   local additional_message=$2
 
   local rcfile_fullpath="${HOME}/.${rcfile}"
-  local rcfile_bkp_path="${HOME}/${rcfile}.$(utc_timestamp).bkp"
   local source_rcfile="${HOME}/.vim/bundle/bouncing-vim/rc-files/${rcfile}"
 
   if [[ $(readlink $rcfile_fullpath) == $source_rcfile ]]; then
@@ -30,12 +40,7 @@ Do you want to create a symlink? [y/N]:"
   read -r
 
   if [[ $REPLY =~ ^[Yy] ]]; then
-    if [[ -e "${rcfile_fullpath}" && ! -L "${rcfile_fullpath}" ]]; then
-      printf "[move] " && mv -v "${rcfile_fullpath}" "${rcfile_bkp_path}"
-    else
-      echo "No previous ${rcfile} to backup."
-    fi
-
+    backup_copy "${rcfile_fullpath}"
     printf "[symlink] " && ln -sfv "${source_rcfile}" "${rcfile_fullpath}"
   else
     echo "Inspect the provided ${rcfile} for more info."
@@ -145,4 +150,3 @@ ensure_vim_dir_structure () {
   echo "Ensure a complete ~/.vim dir structure"
   mkdir -v -p ~/.vim/{bundle,autoload,colors,undo,swap,_disabled_plugins}
 }
-

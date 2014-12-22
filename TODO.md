@@ -1,6 +1,6 @@
 To do
 
-* add info about the colours in the readme
+* add info about the colours to the readme
 * use proper version checking for breakindent when vim 7.5 is released
 * add script for gnome terminal colors (both solarized and agnostic)
 * use cmd c/s on mac, is it even possible?
@@ -23,7 +23,7 @@ To do
 * add scripts for gnome-terminal profiles
 * reorganize plugins basic + by subject + get-all option
 * more statusline options: <http://got-ravings.blogspot.co.uk/2008/08/vim-pr0n-making-statuslines-that-own.html>
-* put the prefix for the temporary install in a variable (vim-plugin-list.sh)
+* put the prefix for the temporary install in a variable (config.sh)
 * add notes about setting the terminal app to solarized
 * http://tonkersten.com/2011/07/104-switching-to-tmux/
 * add current word search to the grep helpers
