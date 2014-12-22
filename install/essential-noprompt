@@ -5,6 +5,7 @@ set -e
 HOME_DIR=$1
 CURRDIR=$(cd "$(dirname $0)" && pwd -P)
 source "${CURRDIR}/config.sh"
+source "${CURRDIR}/utils.sh"
 
 "${CURRDIR}/_noprompt-common" "${HOME_DIR}"
 

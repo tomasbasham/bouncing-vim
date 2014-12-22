@@ -6,7 +6,6 @@ Your vimrc has been backup and replaced with a link to the vimrc provided
 to guarantee the proper functioning of the setup.
 
 Please move your own additional setup to ~/.vimrc.after.
-
 "
 
 declare -a -r ESSENTIALS=(
