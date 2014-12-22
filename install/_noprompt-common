@@ -15,10 +15,15 @@ source "${CURRDIR}/utils.sh"
 
 ensure_vim_dir_structure
 
-install_pathogen
+if has_pathogen; then
+  echo "pathogen.vim is already installed"
+else
+  install_pathogen
+fi
+
 
 backup_copy "${HOME_DIR}/.vimrc"
-ln -sfv "${HOME_DIR}/.vim/bundle/bouncing-vim/rc-files/vimrc" "${HOME_DIR}/.vimrc"
+printf "[symlink] " && ln -sfv "${HOME_DIR}/.vim/bundle/bouncing-vim/rc-files/vimrc" "${HOME_DIR}/.vimrc"
 
 backup_copy "${HOME_DIR}/.tmux.conf"
-ln -sfv "${HOME_DIR}/.vim/bundle/bouncing-vim/rc-files/tmux.conf" "${HOME_DIR}/.tmux.conf"
+printf "[symlink] " && ln -sfv "${HOME_DIR}/.vim/bundle/bouncing-vim/rc-files/tmux.conf" "${HOME_DIR}/.tmux.conf"
