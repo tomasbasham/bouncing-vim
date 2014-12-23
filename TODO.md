@@ -7,8 +7,7 @@ To do
 * in case of issues with agnostic take a look at
   <http://www.terminally-incoherent.com/blog/2012/10/17/vim-solarized-and-tmux/>
 * underline current line: <http://www.vimbits.com/bits/12>, `:t. | s/./-/ | nohl`
-* add message to the install script about the vimrc.after
-* IN PROGRESS: fix ALT modifier not working at all on Mac terminals
+* post a reply about ALT modifier not working on Mac terminals
 * fix the `date` command not working on Mac
 * investigate fuzzy in-buffer search
 * remove as much as possible from the vimrc

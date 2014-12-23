@@ -74,10 +74,15 @@ fi
 link_rcfile \
   "vimrc" \
   "
+You are now using the provided vimrc file.
+Put all your custom vim configuration in a ~/.vimrc.after file.
+" \
+  "
 NOTE: Make sure your vimrc initializes pathogen.
 If you change your mind and want to use the included vimrc, just rerun the
 install script: you will still be able to customise your setup with a
-~/.vimrc.after that will be loaded automatically."
+~/.vimrc.after that will be loaded automatically.
+"
 
 # =================
 # === tmux.conf ===
@@ -86,8 +91,12 @@ install script: you will still be able to customise your setup with a
 link_rcfile \
   "tmux.conf" \
   "
+Tmux is now using the provided configuration.
+" \
+  "
 NOTE: Make sure you add the recommended configuration. See the provided
-tmux.conf."
+tmux.conf.
+"
 
 # =======================
 # === Install plugins ===

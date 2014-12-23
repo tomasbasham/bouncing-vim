@@ -21,7 +21,8 @@ backup_copy() {
 
 link_rcfile () {
   local rcfile=$1
-  local additional_message=$2
+  local accept_link_message=$2
+  local no_link_message=$3
 
   local rcfile_fullpath="${HOME}/.${rcfile}"
   local source_rcfile="${HOME}/.vim/bundle/bouncing-vim/rc-files/${rcfile}"
@@ -42,10 +43,11 @@ Do you want to create a symlink? [y/N]:"
   if [[ $REPLY =~ ^[Yy] ]]; then
     backup_copy "${rcfile_fullpath}"
     printf "[symlink] " && ln -sfv "${source_rcfile}" "${rcfile_fullpath}"
+    echo "${accept_link_message}"
   else
     echo "Inspect the provided ${rcfile} for more info."
     echo "${source_rcfile}"
-    echo "${additional_message}"
+    echo "${no_link_message}"
   fi
 }
 
