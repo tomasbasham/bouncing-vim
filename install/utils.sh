@@ -5,7 +5,7 @@ get_github_basename () {
 }
 
 utc_timestamp () {
-  date -u -d "today" +"%Y%m%dT%H%M%SZ"
+  date -u +"%Y%m%dT%H%M%SZ"
 }
 
 backup_copy() {

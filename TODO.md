@@ -8,7 +8,6 @@ To do
   <http://www.terminally-incoherent.com/blog/2012/10/17/vim-solarized-and-tmux/>
 * underline current line: <http://www.vimbits.com/bits/12>, `:t. | s/./-/ | nohl`
 * post a reply about ALT modifier not working on Mac terminals
-* fix the `date` command not working on Mac
 * investigate fuzzy in-buffer search
 * remove as much as possible from the vimrc
 * change the installation so that it moves existing vimrc to vimrc.after
