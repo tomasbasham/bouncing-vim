@@ -1,39 +1,42 @@
 To do
 
+no doubt
+
+* move spell checking language to the vimrc.after
+* enable spell checking by default for some file types (markdown, text)
 * add info about the colours to the readme
 * use proper version checking for breakindent when vim 7.5 is released
-* add script for gnome terminal colors (both solarized and agnostic)
+* add scripts for gnome-terminal profiles
+* post a reply about the issue for ALT modifier not working on Mac terminals
+* add open in split to git grep
+* merge `clone_to_bundle_with_home` into `install_plugin_with_pathogen`
+* re-enable vim directives in the files
+* add current word search to the grep helpers
+* add shortcut for global search and replace
+* reinstate unobtrusive handling of the folding
+* put the prefix for the temporary install in a variable (config.sh)
+* Add Q&A section to the readme:
+  - how is bouncing-vim different from, say, janus?
+  - merge the part about pathogen, and who is this for...
+* toggling lines C-n conflicts with multi-edit plugin
+* add shortcut to remove extra blank lines in the middle of the buffer
+
+not so much
+
 * use cmd c/s on mac, is it even possible?
-* in case of issues with agnostic take a look at
-  <http://www.terminally-incoherent.com/blog/2012/10/17/vim-solarized-and-tmux/>
+* in case of issues with agnostic take a look at <http://www.terminally-incoherent.com/blog/2012/10/17/vim-solarized-and-tmux/>
 * underline current line: <http://www.vimbits.com/bits/12>, `:t. | s/./-/ | nohl`
-* post a reply about ALT modifier not working on Mac terminals
 * investigate fuzzy in-buffer search
-* remove as much as possible from the vimrc
 * change the installation so that it moves existing vimrc to vimrc.after
 * consider add moving text inside the line, and comma separate elements
 * add command for rotating vertical <-> horizontal splits
 * convert string to symbol and viceversa
-* escape from buffergator
 * consider auto-correction
-* add open in split to git grep
-* merge `clone_to_bundle_with_home` into `install_plugin_with_pathogen`
-* add scripts for gnome-terminal profiles
-* reorganize plugins basic + by subject + get-all option
 * more statusline options: <http://got-ravings.blogspot.co.uk/2008/08/vim-pr0n-making-statuslines-that-own.html>
-* put the prefix for the temporary install in a variable (config.sh)
-* add notes about setting the terminal app to solarized
-* http://tonkersten.com/2011/07/104-switching-to-tmux/
-* add current word search to the grep helpers
-* Add Q&A section to the readme:
-  - how is bouncing-vim different from, say, janus?
-  - why is it important to use pathogen instead of Vundle?
 * for plugins that end in ".vim" also check the presence of the folder without ".vim"
-* toggling lines C-n conflicts with multi-edit plugin
 * fix or remove leader not working in insert mode
 * toggle between `{}` and `do`-`end`
 * source bashrc after updating it <http://stackoverflow.com/questions/16011245/source-files-in-a-bash-script/16011496#16011496>
-* add shortcut to remove extra blank lines in the middle of the buffer
 * investigate if smooth scrolling is viable/popular...
   - <http://stackoverflow.com/questions/4064651/what-is-the-best-way-to-do-smooth-scrolling-in-vim/12201974#12201974>
   - <https://github.com/Kazark/vim-SimpleSmoothScroll>
@@ -46,17 +49,16 @@ To do
 * Gary Bernhardt rspec tests execution
 * either remove or fix autoreload <http://stackoverflow.com/a/10962191>
 * re-hardwrap paragraphs of text: nnoremap `<leader>q gqip`
-* re-enable vim directives in the files
 * select inside and around pipe chars; see also
   - <http://vim.wikia.com/wiki/Creating_new_text_objects>
   - <http://blog.carbonfive.com/2011/10/17/vim-text-objects-the-definitive-guide/>
   the problem is that pipe is a command to "go to column..."
 * keybindings to toggle the following options, when performance is an issue
-  * :set nocursorline/:NoMatchParen <=> :set cursorline/:DoMatchParen
-  * let loaded_matchparen = 1, to avoid loading the parantheses matching built-in plugin
-* keybindings for activating/deactivating the automatic line wrapping (reflow)
+  - :set nocursorline/:NoMatchParen <=> :set cursorline/:DoMatchParen
+  - let loaded_matchparen = 1, to avoid loading the parantheses matching built-in plugin
+* keybindings for activating/deactivating the automatic line hard wrapping (reflow)
 * join lines in insert mode (not sure it's a good idea)
-* trick to create the required directories if needed, directly from the vimrc
+* join lines without extra space
 * map `<End>` to toggle to the last non-blank char in the line
 
 Other interesting colorschemes
@@ -100,10 +102,11 @@ Other interesting plugins
 * <https://github.com/terryma/vim-expand-region>
 * <https://github.com/terryma/vim-multiple-cursors>
 * <https://github.com/tomtom/tcomment_vim>
-* ssh://hg@bitbucket.org/ns9tks/vim-fuzzyfinder
+* <ssh://hg@bitbucket.org/ns9tks/vim-fuzzyfinder>
 
 Interesting tmux configurations
 -------------------------------
 
+* <http://tonkersten.com/2011/07/104-switching-to-tmux/>
 - <http://zanshin.net/2013/09/05/my-tmux-configuration/>
 - <https://github.com/chrishunt/dot-files/blob/master/.tmux.conf>
