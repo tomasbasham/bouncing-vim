@@ -2,6 +2,7 @@ To do
 
 no doubt
 
+* print list of the plugins that are going to be installed with the guided install
 * move spell checking language to the vimrc.after
 * enable spell checking by default for some file types (markdown, text)
 * add info about the colours to the readme
