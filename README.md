@@ -23,10 +23,15 @@ This has two practical advantages:
   for the pairing session, it can easily installed and removed with a couple
   of commands
 
-### Credits
+### Credits and license
 
 Credits are given in the form of links to the original source.
+Third party plugins of course are copyright of the authors, see the links
+to the github projects.
 Thanks to the great Vim community and to the many authors of the features.
+
+For the scripts, the few original solutions (identified by no link to source)
+and the added value of the mashup: see LICENSE.txt
 
 Installing
 ----------
