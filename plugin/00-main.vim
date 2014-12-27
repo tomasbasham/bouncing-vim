@@ -62,12 +62,18 @@ inoremap jj <ESC>
 inoremap jk <ESC>
 inoremap kj <ESC>
 
-" Toggle spell checking
+" Spell checking
 " ---------------------
 " toggle spell checking with <F6>
 nnoremap <F6> :setlocal spell!<CR>
 vnoremap <F6> :setlocal spell!<CR>
 inoremap <F6> <Esc>:setlocal spell!<CR>
+
+" Automatically enable spell checking for some filetypes.
+" <http://robots.thoughtbot.com/vim-spell-checking>
+" autocmd BufRead,BufNewFile *.md setlocal spell
+autocmd FileType markdown setlocal spell
+autocmd FileType gitcommit setlocal spell
 
 " Disable ex-mode keybinding
 " --------------------------
