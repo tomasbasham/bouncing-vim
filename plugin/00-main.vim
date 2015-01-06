@@ -299,7 +299,8 @@ let g:markdown_fenced_languages = [
 \ 'sh',
 \ 'yaml',
 \ 'go',
-\ 'sql'
+\ 'sql',
+\ 'json'
 \]
 
 " ====================
