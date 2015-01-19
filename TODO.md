@@ -2,6 +2,8 @@ To do
 
 no doubt
 
+* ctrl-p -> check why it does not give precedence to matches in the file name
+* conflict ctrl-space with emacs (to set the point)
 * print list of the plugins that are going to be installed with the guided install
 * add info about the colours to the readme
 * use proper version checking for breakindent when vim 7.5 is released
