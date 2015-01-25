@@ -2,6 +2,10 @@ To do
 
 no doubt
 
+* fuzzy search within buffer
+  - -> replace CtrlP with <https://github.com/Shougo/unite.vim>?
+  - <http://superuser.com/questions/390011/fuzzy-find-within-file-in-vim/445206#445206>
+* global search and replace
 * ctrl-p -> check why it does not give precedence to matches in the file name
 * conflict ctrl-space with emacs (to set the point)
 * print list of the plugins that are going to be installed with the guided install
