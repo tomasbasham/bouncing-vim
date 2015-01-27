@@ -2,6 +2,7 @@ To do
 
 no doubt
 
+* tmux conf: move the hostname to the left and make the colour more prominent
 * fuzzy search within buffer
   - -> replace CtrlP with <https://github.com/Shougo/unite.vim>?
   - <http://superuser.com/questions/390011/fuzzy-find-within-file-in-vim/445206#445206>
