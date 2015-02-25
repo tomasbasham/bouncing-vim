@@ -2,6 +2,7 @@ To do
 
 no doubt
 
+* add syntastic and make sure it's possible to turn it on and off with a shortcut
 * tmux conf: move the hostname to the left and make the colour more prominent
 * fuzzy search within buffer
   - -> replace CtrlP with <https://github.com/Shougo/unite.vim>?
