@@ -2,6 +2,8 @@ To do
 
 no doubt
 
+* make a PR for commentary about line comments in SQL
+* add join command with no spaces
 * add syntastic and make sure it's possible to turn it on and off with a shortcut
 * tmux conf: move the hostname to the left and make the colour more prominent
 * fuzzy search within buffer
