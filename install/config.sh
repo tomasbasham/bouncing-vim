@@ -2,8 +2,9 @@
 
 
 NO_PROMPT_FINAL_MESSAGE="
-Your vimrc has been backup and replaced with a link to the vimrc provided
-to guarantee the proper functioning of the setup.
+Your vimrc, if one was present, has been backed up and replaced with a link to
+the vimrc provided with this plugin, to guarantee the proper functioning of
+the setup.
 
 Please move your own additional setup to ~/.vimrc.after.
 "
@@ -44,4 +45,6 @@ declare -a -r NICE_TO_HAVES=(
           "tpope/vim-rails"
        "vim-ruby/vim-ruby"
            "t9md/vim-ruby-xmpfilter"
+            "mxw/vim-jsx"
+         "Shougo/unite.vim"
 )
