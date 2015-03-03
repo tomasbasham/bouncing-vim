@@ -21,7 +21,7 @@ backup_copy() {
 
 link_rcfile () {
   local rcfile=$1
-  local accept_link_message=$2
+  local accepted_link_message=$2
   local no_link_message=$3
 
   local rcfile_fullpath="${HOME}/.${rcfile}"
@@ -41,14 +41,21 @@ Do you want to create a symlink? [y/N]:"
   read -r
 
   if [[ $REPLY =~ ^[Yy] ]]; then
-    backup_copy "${rcfile_fullpath}"
-    printf "[symlink] " && ln -sfv "${source_rcfile}" "${rcfile_fullpath}"
-    echo "${accept_link_message}"
+    backup_and_symlink "${source_rcfile}" "${rcfile_fullpath}"
+    echo "${accepted_link_message}"
   else
     echo "Inspect the provided ${rcfile} for more info."
     echo "${source_rcfile}"
     echo "${no_link_message}"
   fi
+}
+
+backup_and_symlink() {
+  local source_rcfile=$1
+  local rcfile_fullpath=$2
+
+  backup_copy "${rcfile_fullpath}"
+  printf "[symlink] " && ln -sfv "${source_rcfile}" "${rcfile_fullpath}"
 }
 
 clone_to_bundle_with_home () {

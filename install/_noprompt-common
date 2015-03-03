@@ -21,9 +21,6 @@ else
   install_pathogen
 fi
 
+backup_and_symlink "${HOME_DIR}/.vim/bundle/bouncing-vim/rc-files/vimrc" "${HOME_DIR}/.vimrc"
 
-backup_copy "${HOME_DIR}/.vimrc"
-printf "[symlink] " && ln -sfv "${HOME_DIR}/.vim/bundle/bouncing-vim/rc-files/vimrc" "${HOME_DIR}/.vimrc"
-
-backup_copy "${HOME_DIR}/.tmux.conf"
-printf "[symlink] " && ln -sfv "${HOME_DIR}/.vim/bundle/bouncing-vim/rc-files/tmux.conf" "${HOME_DIR}/.tmux.conf"
+backup_and_symlink  "${HOME_DIR}/.vim/bundle/bouncing-vim/rc-files/tmux.conf" "${HOME_DIR}/.tmux.conf"
