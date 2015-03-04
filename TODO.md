@@ -2,6 +2,7 @@ To do
 
 no doubt
 
+* use tabs for makefiles
 * make a PR for commentary about line comments in SQL
 * add join command with no spaces
 * add syntastic and make sure it's possible to turn it on and off with a shortcut
