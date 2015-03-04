@@ -2,6 +2,9 @@ To do
 
 no doubt
 
+* add html beautifying <http://vim.wikia.com/wiki/Cleanup_your_HTML>
+    :command Thtml :%!tidy -q -i --show-errors 0
+    :command Txml  :%!tidy -q -i --show-errors 0 -xml
 * use tabs for makefiles
 * make a PR for commentary about line comments in SQL
 * add join command with no spaces
