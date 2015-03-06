@@ -2,6 +2,7 @@ To do
 
 no doubt
 
+* make an "agnostic" version of solarized
 * add html beautifying <http://vim.wikia.com/wiki/Cleanup_your_HTML>
     :command Thtml :%!tidy -q -i --show-errors 0
     :command Txml  :%!tidy -q -i --show-errors 0 -xml
