@@ -344,3 +344,37 @@ autocmd ColorScheme * highlight MBEVisibleChanged ctermfg=14
 autocmd ColorScheme * highlight MBEVisibleActiveNormal ctermfg=0
 " ...CHANGED, VISIBLE and ACTIVE
 autocmd ColorScheme * highlight MBEVisibleActiveChanged ctermfg=0
+
+" =================
+" === Unite.vim ===
+" =================
+
+" let g:unite_enable_start_insert = 1
+" let g:unite_split_rule = "botright"
+" let g:unite_winheight = 10
+call unite#custom#profile('default', 'context', {
+\   'start_insert'  : 1,
+\   'direction'     : 'botright',
+\   'winheight'     : 10,
+\ })
+let g:unite_force_overwrite_statusline = 0
+
+" call unite#custom_source('file_rec,file_rec/async,file_mru,file,buffer,grep',
+call unite#custom_source('file_rec,file_rec/async,file_mru,file',
+\   'ignore_pattern', join([
+\     '\.git/',
+\     '\.bundle/',
+\   ], '\|')
+\ )
+
+call unite#custom_source('file_rec,file_rec/async,file_mru,file',
+\   'matchers', [
+\     'matcher_fuzzy',
+\   ]
+\ )
+
+call unite#custom_source('file_rec,file_rec/async,file_mru,file',
+\   'sorters', [
+\     'sorter_rank',
+\   ]
+\ )
