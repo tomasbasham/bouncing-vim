@@ -117,6 +117,7 @@ Other interesting plugins
 * <https://github.com/terryma/vim-multiple-cursors>
 * <https://github.com/tomtom/tcomment_vim>
 * <ssh://hg@bitbucket.org/ns9tks/vim-fuzzyfinder>
+* <https://github.com/gerw/vim-HiLinkTrace.git> to get syntax highlight style
 
 Interesting tmux configurations
 -------------------------------
