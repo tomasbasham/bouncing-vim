@@ -194,7 +194,7 @@ Features
 * **CtrlP**
   - include hidden files in the results
   - ignore some common dirs and file types
-  - open the buffer list with `<leader>+b`, use the normal `<Esc>` to close
+  - open the buffer list with `<leader>+b`
   - do not reuse existing buffers (according to the feedback, this is usually
     not what the user would expect)
 
