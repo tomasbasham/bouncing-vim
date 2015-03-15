@@ -35,6 +35,12 @@ no doubt
 * toggling lines C-n conflicts with multi-edit plugin
 * add shortcut to remove extra blank lines in the middle of the buffer
 
+Unite notes
+
+* file fuzzy search order -> selecta (<https://github.com/Shougo/unite.vim/issues/495>)
+* <http://mouki.io/2013/08/15/Vim-CtrlP-behaviour-with-Unite.html>
+* <http://www.codeography.com/2013/06/17/replacing-all-the-things-with-unite-vim.html>
+
 not so much
 
 * use cmd c/s on mac, is it even possible?
