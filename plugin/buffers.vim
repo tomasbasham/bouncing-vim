@@ -44,7 +44,7 @@ endif
 " === Switch buffers... ===
 " =========================
 
-" Use the MiniBufExplorer plugin for buffer switching if available.
+" Delegate to the MiniBufExplorer plugin for buffer switching if available.
 
 function NextBuf ()
   if exists(':MBEbn')
