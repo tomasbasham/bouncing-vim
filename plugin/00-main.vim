@@ -17,34 +17,6 @@ set nomodeline " Ignore vim directives in magic comments
 nmap , \
 vmap , \
 
-" =======================
-" === Misc keybinding ===
-" =======================
-
-" Insert line below or above without going into insert mode.
-" ----------------------------------------------------------
-" <http://vim.wikia.com/wiki/Insert_newline_without_entering_insert_mode>
-" The idea of using `oo` and `OO` is nice in theory, but slows down the normal
-" `o` and `O`.
-" CTRL-O and CTRL-I are native Vim keybindings to move through the jumplist.
-" Leader-O and Leader-I are less convenient to type, and require to release
-" the leader to repeat the command. This is not a strong argument though,
-" because having multiple blank lines is considered bad form, and being
-" able to insert one should be enough.
-" On top of this, no keycode fix seems to be possible for Mac, since ALT-I
-" doesn't correspond to any character.
-" These mappings are therefore experimental and likely to change.
-nnoremap <Leader>o mao<Esc>`a
-nnoremap <Leader>i maO<Esc>`a
-
-" Fix keycodes and map ALT-O and ALT-I to add new line below/above without
-" going in insert mode.
-map o <M-o>
-noremap <M-o> mao<Esc>`a
-
-map i <M-i>
-noremap <M-i> maO<Esc>`a
-
 " Remap F1 key
 " ------------
 " Map F1 key (main vim help) to ESC to avoid bringing it up by mistake.
