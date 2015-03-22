@@ -53,6 +53,13 @@ autocmd FileType gitcommit setlocal spell
 " Remap Q in normal mode to no-op to avoid bringing up ex-mode accidentally.
 nnoremap Q <Nop>
 
+" Close quickfix list with escape
+" -------------------------------
+
+if has('localmap')
+  autocmd FileType qf nnoremap <buffer> <silent> <Esc> :<c-u> cclose<CR>
+endif
+
 " ====================
 " === Misc options ===
 " ====================
