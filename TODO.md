@@ -40,6 +40,7 @@ Unite notes
 * file fuzzy search order -> selecta (<https://github.com/Shougo/unite.vim/issues/495>)
 * <http://mouki.io/2013/08/15/Vim-CtrlP-behaviour-with-Unite.html>
 * <http://www.codeography.com/2013/06/17/replacing-all-the-things-with-unite-vim.html>
+* <http://bling.github.io/blog/2013/06/02/unite-dot-vim-the-plugin-you-didnt-know-you-need/>
 
 not so much
 
