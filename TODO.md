@@ -2,6 +2,7 @@ To do
 
 no doubt
 
+* highlight searching without moving <http://vim.wikia.com/wiki/Highlight_all_search_pattern_matches#Highlight_matches_without_moving>
 * make an "agnostic" version of solarized
 * add html beautifying <http://vim.wikia.com/wiki/Cleanup_your_HTML>
     :command Thtml :%!tidy -q -i --show-errors 0
