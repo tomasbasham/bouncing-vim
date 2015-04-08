@@ -2,6 +2,7 @@ To do
 
 no doubt
 
+* close quickfix list with escape
 * highlight searching without moving <http://vim.wikia.com/wiki/Highlight_all_search_pattern_matches#Highlight_matches_without_moving>
 * make an "agnostic" version of solarized
 * add html beautifying <http://vim.wikia.com/wiki/Cleanup_your_HTML>
@@ -100,6 +101,7 @@ Other interesting colorschemes
 Other interesting plugins
 -------------------------
 
+* good vimrc configuration <http://vim.wikia.com/wiki/Example_vimrc>
 * great vimrc configuration <https://github.com/skwp/dotfiles>
 * <https://github.com/rhysd/vim-operator-surround>
 * <http://bling.github.io/blog/2013/06/02/unite-dot-vim-the-plugin-you-didnt-know-you-need/>
