@@ -2,6 +2,7 @@ To do
 
 no doubt
 
+* find a way to enable rails syntax highlighting manually
 * close quickfix list with escape
 * highlight searching without moving <http://vim.wikia.com/wiki/Highlight_all_search_pattern_matches#Highlight_matches_without_moving>
 * make an "agnostic" version of solarized
