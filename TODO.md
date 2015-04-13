@@ -2,6 +2,7 @@ To do
 
 no doubt
 
+* fix agnostic FIXME comment highlighting
 * remove the vimrc entirely
 * disable plugin specific configuration if the plugin is not installed
 * find a way to enable rails syntax highlighting manually
