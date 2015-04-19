@@ -7,6 +7,14 @@
 set nocompatible " with VI
 set nomodeline " Ignore vim directives in magic comments
 
+" =============================
+" === Keycode fixes - basic ===
+" =============================
+
+" Apparently required in crosh
+map [5~ <M-Up>
+map [6~ <M-Down>
+
 " ==================
 " === Leader key ===
 " ==================
