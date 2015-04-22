@@ -509,6 +509,8 @@ recommended sections to your own.
 
 * Seamless navigation between tmux and Vim with `ALT-Up/Down/Left/Right` and
   `ALT-k/j/h/l`.
+  `<M-Down>` and `<M-Up>` will not work on ChromeOS because that is mapped
+  natively to `<PgUp>` and `<PgDown>`.
 
 ### View options
 

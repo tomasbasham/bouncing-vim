@@ -53,6 +53,8 @@ function s:TmuxWinCmd(direction)
 endfunction
 
 " navigate between split windows/tmux panes
+" <M-Down> and <M-Up> will not work on ChromeOS because that is mapped
+" natively to <PgUp> and <PgDown>.
 nmap <M-Down>   :call <SID>TmuxWinCmd('j')<CR>
 nmap <M-Up>     :call <SID>TmuxWinCmd('k')<CR>
 nmap <M-Left>   :call <SID>TmuxWinCmd('h')<CR>
