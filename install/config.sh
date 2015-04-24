@@ -46,5 +46,5 @@ declare -a -r NICE_TO_HAVES=(
        "vim-ruby/vim-ruby"
            "t9md/vim-ruby-xmpfilter"
             "mxw/vim-jsx"
-         "Shougo/unite.vim"
+       "mtscout6/vim-cjsx.git"
 )

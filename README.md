@@ -80,15 +80,15 @@ In both cases:
 You can use the following oneliner.
 
     cd ~/.vim/bundle && { \
-    find * -maxdepth 0 -type d | \
-      while read repo; do \
-        echo "---- $repo ----"; \
-        cd $repo; \
-          git pull origin master; \
-          cd ..; \
-        echo; \
-      done; \
-    cd -; \
+      find * -maxdepth 0 -type d | \
+        while read repo; do \
+          echo "---- $repo ----"; \
+          cd $repo; \
+            git pull origin master; \
+            cd ..; \
+          echo; \
+        done; \
+      cd -; \
     }
 
 ### Integration with the terminal
@@ -139,52 +139,53 @@ List of included plugins
 
 Functionality
 
-* [Ack-vim] (https://github.com/mileszs/ack.vim) - Run [ack] (http://beyondgrep.com/) from Vim, and shows the results in a split window.
-* [commentary.vim] (https://github.com/tpope/vim-commentary) - Comment stuff out.
-* [Ctrl-P] (https://github.com/kien/ctrlp.vim) - Full path fuzzy file, buffer, mru, tag, ... finder for Vim, written in pure Vimscript.
-* [fugitive.vim] (https://github.com/tpope/vim-fugitive) - A Git wrapper so awesome, it should be illegal.
-* [MiniBufExplorer] (https://github.com/fholgado/minibufexpl.vim) - Elegant buffer explorer, takes very little screen space.
-* [Multiple cursors] (https://github.com/terryma/vim-multiple-cursors) - Sublime Text style multiple selections for Vim.
-* [NERDTree] (https://github.com/scrooloose/nerdtree) - Explore the filesystem in a hierarchical tree structure and open files and directories.
-* [Sensible] (https://github.com/tpope/vim-sensible) - A universal set of defaults that (hopefully) everyone can agree on.
-* [Supertab] (https://github.com/ervandew/supertab) - Perform all your Vim insert mode completions with Tab.
-* [Tabular] (https://github.com/godlygeek/tabular) - Vim script for text filtering and alignment.
-* [Surround] (https://github.com/tpope/vim-surround) - Edit parentheses, brackets, quotes, XML tags, and more in pairs.
-* [repeat.vim] (https://github.com/tpope/vim-repeat) - enable repeating supported plugin maps with "."
-* [Ultisnips] (https://github.com/SirVer/ultisnips) - An implementation of TextMates Snippets for the Vim Text Editor. Requires Vim compiled with Python support.
+* [Ack-vim](https://github.com/mileszs/ack.vim) - Run [ack](http://beyondgrep.com/) from Vim, and shows the results in a split window.
+* [commentary.vim](https://github.com/tpope/vim-commentary) - Comment stuff out.
+* [Ctrl-P](https://github.com/kien/ctrlp.vim) - Full path fuzzy file, buffer, mru, tag, ... finder for Vim, written in pure Vimscript.
+* [fugitive.vim](https://github.com/tpope/vim-fugitive) - A Git wrapper so awesome, it should be illegal.
+* [MiniBufExplorer](https://github.com/fholgado/minibufexpl.vim) - Elegant buffer explorer, takes very little screen space.
+* [Multiple cursors](https://github.com/terryma/vim-multiple-cursors) - Sublime Text style multiple selections for Vim.
+* [NERDTree](https://github.com/scrooloose/nerdtree) - Explore the filesystem in a hierarchical tree structure and open files and directories.
+* [Sensible](https://github.com/tpope/vim-sensible) - A universal set of defaults that (hopefully) everyone can agree on.
+* [Supertab](https://github.com/ervandew/supertab) - Perform all your Vim insert mode completions with Tab.
+* [Tabular](https://github.com/godlygeek/tabular) - Vim script for text filtering and alignment.
+* [Surround](https://github.com/tpope/vim-surround) - Edit parentheses, brackets, quotes, XML tags, and more in pairs.
+* [repeat.vim](https://github.com/tpope/vim-repeat) - enable repeating supported plugin maps with "."
+* [Ultisnips](https://github.com/SirVer/ultisnips) - An implementation of TextMates Snippets for the Vim Text Editor. Requires Vim compiled with Python support.
 * [vim-snippets](https://github.com/honza/vim-snippets) - vim-snipmate default snippets
 
 Language support
 
-* [Tim Pope's Markdown] (https://github.com/tpope/vim-markdown), particularly for its ability to highlight code blocks in the respective language.
+* [Tim Pope's Markdown](https://github.com/tpope/vim-markdown), particularly for its ability to highlight code blocks in the respective language.
 
 Colorschemes
 
-* [Agnostic] (https://github.com/ygt-mikekchar/agnostic) - A Vim colour scheme that allows to choose your own colours.
-* [Solarized] (https://github.com/altercation/vim-colors-solarized) - Precision colors for machines and people.
+* [Agnostic](https://github.com/ygt-mikekchar/agnostic) - A Vim colour scheme that allows to choose your own colours.
+* [Solarized](https://github.com/altercation/vim-colors-solarized) - Precision colors for machines and people.
 
 ### Nice-to-have's
 
 These are only installed when running the full install: `./install/essential`
 
-* [Coffeescript] (https://github.com/kchmck/vim-coffee-script) - Adds CoffeeScript support to Vim. It covers syntax, indenting, compiling, and more.
-* [rails.vim] (https://github.com/tpope/vim-rails) - Ruby on Rails power tools.
-* [Ruby] (https://github.com/vim-ruby/vim-ruby) - Vim configuration files for editing and compiling Ruby within Vim.
+* [Coffeescript](https://github.com/kchmck/vim-coffee-script) - Adds CoffeeScript support to Vim. It covers syntax, indenting, compiling, and more.
+* [JSX](https://github.com/mxw/vim-jsx)
+* [CJSX](https://github.com/mtscout6/vim-cjsx.git)
+* [rails.vim](https://github.com/tpope/vim-rails) - Ruby on Rails power tools.
+* [Ruby](https://github.com/vim-ruby/vim-ruby) - Vim configuration files for editing and compiling Ruby within Vim.
 * [RSpec.vim](https://github.com/mikbe/rspec.vim) - RSpec syntax highlighting for non-Rails projects.
-* [Python Syntax] (https://github.com/hdima/python-syntax) - Python syntax highlighting script for Vim.
-* [vim-ruby-xmpfilter] (https://github.com/t9md/vim-ruby-xmpfilter) - Helper for ruby's xmpfilter or seeing_is_believing. Evaluates Ruby code inline and print the result as a comment at the end of the line.
+* [Python Syntax](https://github.com/hdima/python-syntax) - Python syntax highlighting script for Vim.
+* [vim-ruby-xmpfilter](https://github.com/t9md/vim-ruby-xmpfilter) - Helper for ruby's xmpfilter or seeing_is_believing. Evaluates Ruby code inline and print the result as a comment at the end of the line.
 * [vim-go](https://github.com/fatih/vim-go) - Full featured Go development environment. This plugin will create the executable it needs, if the golang runtime is available, the first time Vim is run. This might take a couple of minutes.
-* [mediawiki syntax](https://github.com/chikamichi/mediawiki.vim) - Syntax highlighting for MediaWiki-based projects, such as Wikipedia.
-* [Puppet] (https://github.com/rodjek/vim-puppet)
-* [Dockerfile] (https://github.com/ekalinin/Dockerfile.vim)
-* [Vimux] (https://github.com/benmills/vimux) - Easily interact with tmux from Vim.
-* [Mustache] (https://github.com/mustache/vim-mustache-handlebars) - A Vim plugin for working with mustache and handlebars templates.
+* [Puppet](https://github.com/rodjek/vim-puppet)
+* [Dockerfile](https://github.com/ekalinin/Dockerfile.vim)
+* [Vimux](https://github.com/benmills/vimux) - Easily interact with tmux from Vim.
+* [Mustache](https://github.com/mustache/vim-mustache-handlebars) - A Vim plugin for working with mustache and handlebars templates.
 
 Colorschemes:
 
-* [Noctu] (https://github.com/noahfrederick/vim-noctu) - A Vim color scheme for 16-color terminals.
-* [Base16] (https://github.com/chriskempson/base16-vim) - Color schemes for hackers.
-* [Molokai] (https://github.com/tomasr/molokai) - A Vim port of the monokai theme for TextMate.
+* [Noctu](https://github.com/noahfrederick/vim-noctu) - A Vim color scheme for 16-color terminals.
+* [Base16](https://github.com/chriskempson/base16-vim) - Color schemes for hackers.
+* [Molokai](https://github.com/tomasr/molokai) - A Vim port of the monokai theme for TextMate.
 
 Features
 --------
@@ -264,7 +265,7 @@ Features
 
 * Joining lines:
   - remove the comment symbols when joining lines with `J`
-  - only use one space after punctation ([wiki] (http://en.wikipedia.org/wiki/Sentence_spacing#Typography))
+  - only use one space after punctation ([wiki](http://en.wikipedia.org/wiki/Sentence_spacing#Typography))
 
 * Enable breakindent if supported by the vim version.
 
