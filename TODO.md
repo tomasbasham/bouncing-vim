@@ -2,6 +2,8 @@ To do
 
 no doubt
 
+* consider renaming to bouncing-tim or bouncing-vimux, or dream-tim to express
+  the idea of tight integration with tmux
 * fix agnostic FIXME comment highlighting
 * remove the vimrc entirely
 * disable plugin specific configuration if the plugin is not installed
