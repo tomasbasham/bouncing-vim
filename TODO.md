@@ -2,6 +2,7 @@ To do
 
 no doubt
 
+* handle the counter-intuitive /g option in substitution more correctly
 * consider renaming to bouncing-tim or bouncing-vimux, or dream-tim to express
   the idea of tight integration with tmux
 * fix agnostic FIXME comment highlighting
