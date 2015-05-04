@@ -2,6 +2,7 @@ To do
 
 no doubt
 
+* pass the name of the database to the <C-t> command, and save it until the end of the session
 * handle the counter-intuitive /g option in substitution more correctly
 * consider renaming to bouncing-tim or bouncing-vimux, or dream-tim to express
   the idea of tight integration with tmux
