@@ -2,6 +2,7 @@ To do
 
 no doubt
 
+* add shortcut to underline current line with different characters
 * fix moving rows when at the ends of the buffer
 * override more Agnostic highlight groups, particularly, make comments less prominent than normal text, instead of the other way around
 * pass the name of the database to the <C-t> command, and save it until the end of the session
