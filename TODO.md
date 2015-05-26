@@ -2,6 +2,7 @@ To do
 
 no doubt
 
+* add shortcut to enter current date, and current timestamp
 * add shortcut to underline current line with different characters
 * fix moving rows when at the ends of the buffer
 * override more Agnostic highlight groups, particularly, make comments less prominent than normal text, instead of the other way around
