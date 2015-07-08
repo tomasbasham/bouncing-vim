@@ -2,6 +2,7 @@ To do
 
 no doubt
 
+* copy lines with number increment
 * add shortcut to enter current date, and current timestamp
 * add shortcut to underline current line with different characters
 * fix moving rows when at the ends of the buffer
@@ -99,6 +100,8 @@ not so much
 Other interesting colorschemes
 ------------------------------
 
+* <https://github.com/romainl/flattened>
+* <https://github.com/vim-scripts/AtelierDune> (<https://github.com/atelierbram/syntax-highlighting>)
 * `wget https://raw.github.com/garybernhardt/dotfiles/master/.vim/colors/grb256.vim -P ~/.vim/colors/`
 * <https://github.com/tpope/vim-vividchalk>
 * <https://github.com/Lokaltog/vim-distinguished>
