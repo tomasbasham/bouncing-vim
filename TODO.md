@@ -2,6 +2,7 @@ To do
 
 no doubt
 
+* add shortcut to revert selected lines, not the whole file
 * copy lines with number increment
 * add shortcut to enter current date, and current timestamp
 * add shortcut to underline current line with different characters
