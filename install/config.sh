@@ -29,6 +29,7 @@ declare -a -r ESSENTIALS=(
           "tpope/vim-sensible"
           "tpope/vim-surround"
        "benmills/vimux"
+     "scrooloose/syntastic"
 )
 
 declare -a -r NICE_TO_HAVES=(
