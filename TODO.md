@@ -5,7 +5,10 @@ no doubt
 * update solarized style for different types of spelling errors
 * update solarized for inline code (backticks)
 * add the ability to `:ci|`, `:ci/`, `:ci\`
-* add shortcut to revert selected lines, not the whole file
+* add shortcut to revert selected lines, not the whole file, http://superuser.com/a/603216
+  but does not work in Windows; for portable solution :help 12.4
+    :%!tail -r
+    :'<,'>!tail -r
 * copy lines with number increment
 * add shortcut to enter current date, and current timestamp
 * add shortcut to underline current line with different characters
