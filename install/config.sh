@@ -30,6 +30,7 @@ declare -a -r ESSENTIALS=(
           "tpope/vim-surround"
        "benmills/vimux"
      "scrooloose/syntastic"
+        "Shutnik/jshint2.vim"
 )
 
 declare -a -r NICE_TO_HAVES=(
