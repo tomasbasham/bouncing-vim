@@ -123,6 +123,7 @@ Other interesting colorschemes
 Other interesting plugins
 -------------------------
 
+* <https://github.com/airblade/vim-gitgutter> (feature request)
 * good vimrc configuration <http://vim.wikia.com/wiki/Example_vimrc>
 * great vimrc configuration <https://github.com/skwp/dotfiles>
 * <https://github.com/rhysd/vim-operator-surround>
