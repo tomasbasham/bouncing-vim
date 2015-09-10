@@ -2,6 +2,7 @@ To do
 
 no doubt
 
+* add a global configuration option to enable the "strip multiple blank lines" in bouncing vim itself
 * update solarized style for different types of spelling errors
 * update solarized for inline code (backticks)
 * add the ability to `:ci|`, `:ci/`, `:ci\`
