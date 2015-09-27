@@ -31,6 +31,7 @@ declare -a -r ESSENTIALS=(
        "benmills/vimux"
      "scrooloose/syntastic"
         "Shutnik/jshint2.vim"
+           "elzr/vim-json"
 )
 
 declare -a -r NICE_TO_HAVES=(
