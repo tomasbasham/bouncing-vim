@@ -2,6 +2,7 @@ To do
 
 no doubt
 
+* investigate issue with syntastic + capybara
 * fix the ./install/full-noprompt when running from a location that is not ~/.vim/bundle/bouncing-vim
 * add a global configuration option to enable the "strip multiple blank lines" in bouncing vim itself
 * update solarized style for different types of spelling errors
