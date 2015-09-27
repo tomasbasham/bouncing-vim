@@ -223,6 +223,15 @@ map <Leader>rs :VimuxInterruptRunner<CR>
 " Highlight ruby operators (`/`, `&&`, `*`...)
 let g:ruby_operators = 1
 
+" ================
+" === vim-json ===
+" ================
+
+" Always print the real content, including double quotes.
+" Hiding double quotes is confusing both to look at, and irritating when
+" moving around (because the lines will jump when revealing the quotes).
+let g:vim_json_syntax_conceal = 0
+
 " ==================================
 " === Language specific settings ===
 " ==================================
