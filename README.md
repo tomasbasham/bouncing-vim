@@ -146,16 +146,18 @@ Functionality
 * [MiniBufExplorer](https://github.com/fholgado/minibufexpl.vim) - Elegant buffer explorer, takes very little screen space.
 * [Multiple cursors](https://github.com/terryma/vim-multiple-cursors) - Sublime Text style multiple selections for Vim.
 * [NERDTree](https://github.com/scrooloose/nerdtree) - Explore the filesystem in a hierarchical tree structure and open files and directories.
+* [repeat.vim](https://github.com/tpope/vim-repeat) - enable repeating supported plugin maps with "."
 * [Sensible](https://github.com/tpope/vim-sensible) - A universal set of defaults that (hopefully) everyone can agree on.
 * [Supertab](https://github.com/ervandew/supertab) - Perform all your Vim insert mode completions with Tab.
-* [Tabular](https://github.com/godlygeek/tabular) - Vim script for text filtering and alignment.
 * [Surround](https://github.com/tpope/vim-surround) - Edit parentheses, brackets, quotes, XML tags, and more in pairs.
-* [repeat.vim](https://github.com/tpope/vim-repeat) - enable repeating supported plugin maps with "."
+* [Syntastic](https://github.com/scrooloose/syntastic) - Syntax checking plugin for Vim that runs files through external syntax checkers and displays any resulting errors to the user.
+* [Tabular](https://github.com/godlygeek/tabular) - Vim script for text filtering and alignment.
 * [Ultisnips](https://github.com/SirVer/ultisnips) - An implementation of TextMates Snippets for the Vim Text Editor. Requires Vim compiled with Python support.
 * [vim-snippets](https://github.com/honza/vim-snippets) - vim-snipmate default snippets
 
 Language support
 
+* [vim-json](https://github.com/elzr/vim-json) - JSON is much stricter than JavaScript, incurring in confusion and errors if not handled correctly.
 * [Tim Pope's Markdown](https://github.com/tpope/vim-markdown), particularly for its ability to highlight code blocks in the respective language.
 
 Colorschemes
@@ -165,21 +167,21 @@ Colorschemes
 
 ### Nice-to-have's
 
-These are only installed when running the full install: `./install/essential`
+These are only installed when running the full install: `./install/full`
 
-* [Coffeescript](https://github.com/kchmck/vim-coffee-script) - Adds CoffeeScript support to Vim. It covers syntax, indenting, compiling, and more.
-* [JSX](https://github.com/mxw/vim-jsx)
 * [CJSX](https://github.com/mtscout6/vim-cjsx.git)
-* [rails.vim](https://github.com/tpope/vim-rails) - Ruby on Rails power tools.
-* [Ruby](https://github.com/vim-ruby/vim-ruby) - Vim configuration files for editing and compiling Ruby within Vim.
-* [RSpec.vim](https://github.com/mikbe/rspec.vim) - RSpec syntax highlighting for non-Rails projects.
-* [Python Syntax](https://github.com/hdima/python-syntax) - Python syntax highlighting script for Vim.
-* [vim-ruby-xmpfilter](https://github.com/t9md/vim-ruby-xmpfilter) - Helper for ruby's xmpfilter or seeing_is_believing. Evaluates Ruby code inline and print the result as a comment at the end of the line.
-* [vim-go](https://github.com/fatih/vim-go) - Full featured Go development environment. This plugin will create the executable it needs, if the golang runtime is available, the first time Vim is run. This might take a couple of minutes.
-* [Puppet](https://github.com/rodjek/vim-puppet)
+* [Coffeescript](https://github.com/kchmck/vim-coffee-script) - Adds CoffeeScript support to Vim. It covers syntax, indenting, compiling, and more.
 * [Dockerfile](https://github.com/ekalinin/Dockerfile.vim)
-* [Vimux](https://github.com/benmills/vimux) - Easily interact with tmux from Vim.
+* [JSX](https://github.com/mxw/vim-jsx)
 * [Mustache](https://github.com/mustache/vim-mustache-handlebars) - A Vim plugin for working with mustache and handlebars templates.
+* [Puppet](https://github.com/rodjek/vim-puppet)
+* [Python Syntax](https://github.com/hdima/python-syntax) - Python syntax highlighting script for Vim.
+* [rails.vim](https://github.com/tpope/vim-rails) - Ruby on Rails power tools.
+* [RSpec.vim](https://github.com/mikbe/rspec.vim) - RSpec syntax highlighting for non-Rails projects.
+* [Ruby](https://github.com/vim-ruby/vim-ruby) - Vim configuration files for editing and compiling Ruby within Vim.
+* [vim-go](https://github.com/fatih/vim-go) - Full featured Go development environment. This plugin will create the executable it needs, if the golang runtime is available, the first time Vim is run. This might take a couple of minutes.
+* [vim-ruby-xmpfilter](https://github.com/t9md/vim-ruby-xmpfilter) - Helper for ruby's xmpfilter or seeing_is_believing. Evaluates Ruby code inline and print the result as a comment at the end of the line.
+* [Vimux](https://github.com/benmills/vimux) - Easily interact with tmux from Vim.
 
 Colorschemes:
 
@@ -258,6 +260,10 @@ Features
   - see setup of the Vim Ruby plugin
   - see setup of the xmpfilter plugin
 
+* **JSON**
+  - always show the double quotes, the vim-json plugin would hide them but
+    that is a confusing and intrusive behaviour
+
 ### Miscellaneous options
 
 * Reduce the timeout required to recognize a command from 1000 ms (the default)
@@ -265,7 +271,7 @@ Features
 
 * Joining lines:
   - remove the comment symbols when joining lines with `J`
-  - only use one space after punctation ([wiki](http://en.wikipedia.org/wiki/Sentence_spacing#Typography))
+  - only use one space after punctuation ([wiki](http://en.wikipedia.org/wiki/Sentence_spacing#Typography))
 
 * Enable breakindent if supported by the vim version.
 
@@ -313,6 +319,7 @@ Features
 
 * Quickfix list
   - go to the next with `]q`, to the previous with `[q`
+  - close with escape (imperfect functionality because of delay)
 
 ### Mouse support
 
@@ -320,8 +327,8 @@ Mouse features are fully enabled.
 
 ### Anti-typo command aliases
 
-Some commands like `:w`, `:q` and similar have been aliased with the upper
-case version to account for common misspellings.
+Some commands like `:w`, `:q` and similar have been aliased with the upper case
+version to account for common misspellings.
 
 ### Last position in file
 
@@ -336,8 +343,13 @@ It operates on single lines in normal mode, on multiple lines in visual mode.
 
 Keycode fixes are provided for this to work in Tmux as well.
 
-Note: this doesn't interfere with the copy and cut operations because it uses
+Note 1: this doesn't interfere with the copy and cut operations because it uses
 the `move` command.
+
+Note 2: It's intended to for trivial movements. It will be slow if abused
+(large blocks or large movements) and it won't work when trying to move multiple
+lines below the bottom of the files. If used within the intended limits it will
+work well and will be very convenient.
 
 ### Buffer enhancements
 
