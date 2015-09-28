@@ -314,6 +314,39 @@ autocmd BufRead,BufNewFile {Capfile,Gemfile,Rakefile,config.ru,.caprc,.irbrc,irb
 autocmd BufRead,BufNewFile {*bash_aliases} set filetype=sh
 " It shouldn't be needed with the mustache.vim plugin
 " au BufNewFile,BufRead *.mustache set filetype=html
+autocmd BufRead,BufNewFile {.onc} set filetype=json
+
+" ========================================================
+" === RSpec syntax highlighting outside Rails projects ===
+" ========================================================
+"
+" http://stackoverflow.com/questions/8848896/why-do-i-get-syntax-highlighting-for-rspec-only-in-some-projects-in-vim/8849089#8849089
+
+autocmd BufRead *_spec.rb syn keyword rubyRspec
+      \ expect
+      \ describe
+      \ context
+      \ it
+      \ specify
+      \ it_should_behave_like
+      \ before
+      \ after
+      \ setup
+      \ subject
+      \ its
+      \ shared_examples_for
+      \ shared_context
+      \ let
+      \ include_examples
+      \ xit
+      \ shared_examples
+      \ raise_error
+      \ instance_double
+      \ object_double
+      \ class_double
+      \ double
+
+highlight def link rubyRspec Function
 
 " ==================================
 " === Colors for MiniBufExplorer ===
