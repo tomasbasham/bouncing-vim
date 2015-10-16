@@ -239,6 +239,10 @@ Features
   - focus the buffer list with `<leader>t`
   - toggle the buffer list with `<leader>m`
 
+* **Syntastic**
+  - It's configured for passive mode by default. See `:h syntastic_mode_map`
+    and override this setting in `~/.vimrc.after`
+
 ### Language specific settings
 
 * **Java**

@@ -232,6 +232,17 @@ let g:ruby_operators = 1
 " moving around (because the lines will jump when revealing the quotes).
 let g:vim_json_syntax_conceal = 0
 
+" =================
+" === syntastic ===
+" =================
+
+if !exists("g:syntastic_mode_map")
+  let g:syntastic_mode_map = {
+      \ "mode": "passive",
+      \ "active_filetypes": [],
+      \ "passive_filetypes": [] }
+endif
+
 " ==================================
 " === Language specific settings ===
 " ==================================
