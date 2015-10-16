@@ -250,7 +250,6 @@ Features
 
 * **Python**
   - soft tab with 4 spaces
-  - use `indent` as `foldmethod`
 
 * **golang**
   - hard tabs with 4 spaces

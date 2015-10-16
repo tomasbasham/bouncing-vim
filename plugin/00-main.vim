@@ -251,7 +251,7 @@ endif
 autocmd FileType java setlocal ts=4 sts=4 sw=4
 
 " --- Python
-" autocmd FileType python setlocal ts=4 sts=4 sw=4
+autocmd FileType python setlocal ts=4 sts=4 sw=4
 " autocmd FileType python setlocal foldmethod=indent " it works pretty badly anyway
 
 " --- Go
