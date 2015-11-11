@@ -2,6 +2,7 @@ To do
 
 no doubt
 
+* <https://www.reddit.com/r/tmux/comments/3paqoi/tmux_21_has_been_released/>
 * NerdTree preview: <http://stackoverflow.com/a/28407909>
 * investigate issue with syntastic + capybara
 * fix the ./install/full-noprompt when running from a location that is not ~/.vim/bundle/bouncing-vim
