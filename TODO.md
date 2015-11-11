@@ -2,6 +2,7 @@ To do
 
 no doubt
 
+* <http://vim.wikia.com/wiki/Make_Vim_completion_popup_menu_work_just_like_in_an_IDE>
 * <https://www.reddit.com/r/tmux/comments/3paqoi/tmux_21_has_been_released/>
 * NerdTree preview: <http://stackoverflow.com/a/28407909>
 * investigate issue with syntastic + capybara
