@@ -16,7 +16,7 @@ declare -a -r ESSENTIALS=(
   "fholgado/minibufexpl.vim"
   "godlygeek/tabular"
   "honza/vim-snippets"
-  "kien/ctrlp.vim"
+  "ctrlpvim/ctrlp.vim"
   "lucabelmondo/bouncing-vim"
   "mileszs/ack.vim"
   "scrooloose/nerdtree"
