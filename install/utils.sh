@@ -8,12 +8,14 @@ utc_timestamp () {
   date -u +"%Y%m%dT%H%M%SZ"
 }
 
-backup_copy() {
+backup_copy () {
   original_fullpath=$1
   bkp_path="${original_fullpath}.$(utc_timestamp).bkp"
 
-  if [[ -e "${original_fullpath}" && ! -L "${original_fullpath}" ]]; then
-    printf "[restore] " && mv -v "${original_fullpath}" "${bkp_path}"
+  if [[ -L "${original_fullpath}" ]]; then
+    echo "[skip] The destination is already a symlink, no need to backup."
+  elif [[ -e "${original_fullpath}" ]]; then
+    printf "[backup] " && mv -v "${original_fullpath}" "${bkp_path}"
   else
     echo "[skip] No existing version of ${original_fullpath} to backup."
   fi
@@ -36,7 +38,7 @@ link_rcfile () {
 Some of the features require specific configuration, provided by
 ${source_rcfile}
 You can now link to the ${rcfile} provided (your ${rcfile} will be backed up if present).
-Do you want to create a symlink? [y/N]:"
+Do you want to create a symlink? [y/N]: "
 
   read -r
 

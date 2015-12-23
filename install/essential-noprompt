@@ -7,7 +7,7 @@ CURRDIR=$(cd "$(dirname $0)" && pwd -P)
 source "${CURRDIR}/config.sh"
 source "${CURRDIR}/utils.sh"
 
-"${CURRDIR}/_noprompt-common" "${HOME_DIR}"
+"${CURRDIR}/noprompt-base" "${HOME_DIR}"
 
 for github_project in ${ESSENTIALS[@]}; do
   clone_to_bundle_with_home "${github_project}" "${HOME_DIR}"
