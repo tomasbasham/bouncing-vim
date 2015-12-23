@@ -15,11 +15,7 @@ source "${CURRDIR}/utils.sh"
 
 ensure_vim_dir_structure
 
-if has_pathogen; then
-  echo "pathogen.vim is already installed"
-else
-  install_pathogen
-fi
+install_pathogen
 
 backup_and_symlink "${HOME_DIR}/.vim/bundle/bouncing-vim/rc-files/vimrc" "${HOME_DIR}/.vimrc"
 

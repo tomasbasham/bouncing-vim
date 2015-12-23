@@ -27,6 +27,7 @@ declare -a -r ESSENTIALS=(
   "tpope/vim-commentary"
   "tpope/vim-fugitive"
   "tpope/vim-markdown"
+  "tpope/vim-pathogen"
   "tpope/vim-repeat"
   "tpope/vim-sensible"
   "tpope/vim-surround"

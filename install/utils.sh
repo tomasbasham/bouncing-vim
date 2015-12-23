@@ -116,7 +116,7 @@ install_tmp_plugin_with_pathogen () {
 }
 
 has_pathogen () {
-  if [[ -n $(find ~/.vim -name pathogen.vim) ]]; then
+  if [[ -e "${HOME}/.vim/autoload/pathogen.vim" ]]; then
     return 0
   else
     return 1
@@ -124,11 +124,22 @@ has_pathogen () {
 }
 
 install_pathogen () {
-  ensure_curl
+  if has_pathogen; then
+    echo "[skip] pathogen.vim is already installed"
+    return 0
+  fi
 
-  echo "Install pathogen to handle your plugins"
-  curl -L -o ~/.vim/autoload/pathogen.vim \
-    https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
+  # tabs are required for indented heredocs
+  cat <<- EOF
+		Install pathogen to handle your plugins, as a normal plugin,
+		so it can be easily updated.
+	EOF
+
+  clone_to_bundle_with_home "tpope/vim-pathogen" "${HOME}"
+
+  ln -sfv \
+    "${HOME}/.vim/bundle/vim-pathogen/autoload/pathogen.vim" \
+    "${HOME}/.vim/autoload/pathogen.vim"
 }
 
 ls_tmp_plugins () {
@@ -146,13 +157,6 @@ archive_tmp_plugins () {
       "${tmp_plugin}" \
       "${HOME}/.vim/_disabled_plugins/${tmp_plugin_name}-$(utc_timestamp)"
   done
-}
-
-ensure_curl () {
-  if [[ ! $(command -v curl) ]]; then
-    sudo apt-get update
-    sudo apt-get install -y curl
-  fi
 }
 
 ensure_vim_dir_structure () {
