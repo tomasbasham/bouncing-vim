@@ -65,11 +65,11 @@ clone_to_bundle_with_home () {
   local github_basename=$(get_github_basename $github_project)
   local plugin_dir="${home_dir}/.vim/bundle/$github_basename"
 
-  if [[ ! -d "${plugin_dir}" ]]; then
+  if [[ -d "${plugin_dir}" ]]; then
+    echo "[skip] $github_project -> (already installed)"
+  else
     echo "[install] $github_project -> ${plugin_dir}"
     git clone -q "https://github.com/${github_project}.git" "${plugin_dir}"
-  else
-    echo "[skip] $github_project -> (already installed)"
   fi
 }
 
@@ -90,11 +90,11 @@ install_plugin_with_pathogen () {
   local std_plugin_dir=$(_get_std_plugin_dir "${github_project}")
   local tmp_plugin_dir=$(_get_tmp_plugin_dir "${github_project}")
 
-  if [[ -d "${tmp_plugin_dir}" ]]; then
+  if [[ -d "${std_plugin_dir}" ]]; then
+    echo "[skip] $github_project -> already installed"
+  elif [[ -d "${tmp_plugin_dir}" ]]; then
     echo "[rename] tmp location: ${tmp_plugin_dir} -> ${std_plugin_dir}"
     mv "${tmp_plugin_dir}" "${std_plugin_dir}"
-  elif [[ -d "${std_plugin_dir}" ]]; then
-    echo "[skip] $github_project -> already installed"
   else
     echo "[install] $github_project -> ${std_plugin_dir}"
     git clone -q "https://github.com/${github_project}.git" "${std_plugin_dir}"
