@@ -13,9 +13,9 @@ backup_copy() {
   bkp_path="${original_fullpath}.$(utc_timestamp).bkp"
 
   if [[ -e "${original_fullpath}" && ! -L "${original_fullpath}" ]]; then
-    printf "[move] " && mv -v "${original_fullpath}" "${bkp_path}"
+    printf "[restore] " && mv -v "${original_fullpath}" "${bkp_path}"
   else
-    echo "No existing version of ${original_fullpath} to backup."
+    echo "[skip] No existing version of ${original_fullpath} to backup."
   fi
 }
 
@@ -28,7 +28,7 @@ link_rcfile () {
   local source_rcfile="${HOME}/.vim/bundle/bouncing-vim/rc-files/${rcfile}"
 
   if [[ $(readlink $rcfile_fullpath) == $source_rcfile ]]; then
-    echo "$rcfile is already linking to the provided rcfile"
+    echo "[skip] $rcfile is already linking to the provided rcfile"
     return 0
   fi
 
@@ -44,7 +44,7 @@ Do you want to create a symlink? [y/N]:"
     backup_and_symlink "${source_rcfile}" "${rcfile_fullpath}"
     echo "${accepted_link_message}"
   else
-    echo "Inspect the provided ${rcfile} for more info."
+    echo "[Info] Inspect the provided ${rcfile} for more info."
     echo "${source_rcfile}"
     echo "${no_link_message}"
   fi
@@ -160,6 +160,6 @@ archive_tmp_plugins () {
 }
 
 ensure_vim_dir_structure () {
-  echo "Ensure a complete ~/.vim dir structure"
+  echo "[mkdir] Ensure a complete ~/.vim dir structure"
   mkdir -v -p ~/.vim/{bundle,autoload,colors,undo,swap,_disabled_plugins}
 }

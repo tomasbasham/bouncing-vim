@@ -17,8 +17,11 @@ ensure_vim_dir_structure
 
 install_pathogen
 
-backup_and_symlink "${HOME_DIR}/.vim/bundle/bouncing-vim/rc-files/vimrc" "${HOME_DIR}/.vimrc"
+backup_and_symlink "${HOME_DIR}/.vim/bundle/bouncing-vim/rc-files/vimrc" \
+                   "${HOME_DIR}/.vimrc"
 
-backup_and_symlink  "${HOME_DIR}/.vim/bundle/bouncing-vim/rc-files/tmux.conf" "${HOME_DIR}/.tmux.conf"
+backup_and_symlink "${HOME_DIR}/.vim/bundle/bouncing-vim/rc-files/tmux.conf" \
+                   "${HOME_DIR}/.tmux.conf"
 
-backup_and_symlink  "${HOME_DIR}/.vim/bundle/bouncing-vim/rc-files/tmux.colours.conf" "${HOME_DIR}/.tmux.colours.conf"
+backup_and_symlink "${HOME_DIR}/.vim/bundle/bouncing-vim/rc-files/tmux.colours.conf" \
+                   "${HOME_DIR}/.tmux.colours.conf"

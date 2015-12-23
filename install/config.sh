@@ -1,12 +1,11 @@
 #!/usr/bin/env bash
 
-
 NO_PROMPT_FINAL_MESSAGE="
-Your vimrc, if one was present, has been backed up and replaced with a link to
-the vimrc provided with this plugin, to guarantee the proper functioning of
-the setup.
+  Your vimrc, if one was present, has been backed up and replaced with a link to
+  the vimrc provided with this plugin, to guarantee the proper functioning of
+  the setup.
 
-Please move your own additional setup to ~/.vimrc.after.
+  Please move your own additional setup to ~/.vimrc.after.
 "
 
 declare -a -r ESSENTIALS=(
