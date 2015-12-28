@@ -131,15 +131,11 @@ install_pathogen () {
     return 0
   fi
 
-  # tabs are required for indented heredocs
-  cat <<- EOF
-		Install pathogen to handle your plugins, as a normal plugin,
-		so it can be easily updated.
-	EOF
-
+  # Install pathogen to handle your plugins, as a normal plugin,
+  # so it can be easily updated.
   clone_to_bundle_with_home "tpope/vim-pathogen" "${HOME}"
 
-  ln -sfv \
+  printf "[symlink] " && ln -sfv \
     "${HOME}/.vim/bundle/vim-pathogen/autoload/pathogen.vim" \
     "${HOME}/.vim/autoload/pathogen.vim"
 }
