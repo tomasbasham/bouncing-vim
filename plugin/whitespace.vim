@@ -42,6 +42,7 @@ autocmd FileType Dockerfile   autocmd BufWritePre <buffer> :call <SID>StripTrail
 autocmd FileType c            autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
 autocmd FileType coffee       autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
 autocmd FileType cpp          autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
+autocmd FileType css          autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
 autocmd FileType eruby        autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
 " Conflicts with the same functionality provided by gofmt + fatih/vim-go
 " autocmd FileType go           autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
