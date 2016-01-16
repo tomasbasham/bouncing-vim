@@ -3,7 +3,10 @@
 " ====================
 
 set noerrorbells visualbell t_vb=    " Disable all bells
-set encoding=utf-8                   " Encoding
+let is_neovim=matchstr($VIMRUNTIME, '\<nvim\>')
+if is_neovim == ""
+  set encoding=utf-8                 " Encoding
+endif
 set number                           " display line numbers
 " nnoremap <C-n> :setlocal number!<CR> " Toggle line numbers
 set scrolloff=3                      " number of lines visible when scrolling
