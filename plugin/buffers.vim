@@ -131,6 +131,28 @@ noremap <Leader>b :CtrlPBuffer<CR>
 " prevent from being overridden by buffergator
 let g:buffergator_suppress_keymaps = 1
 
+" Delete buffer from CtrlP list, provided by CtrlP's author himself.
+" It does the trick, I don't seem to be able to make <C-@> work when in tmux,
+" so we are using "Alt-d", which matches the shortcut to delete lines,
+" which seems intuitive because deleting a buffer from the list is like
+" removing a line.
+" See https://github.com/kien/ctrlp.vim/issues/280#issuecomment-8638286 for
+" the discussion and why it's not been included in the plugin.
+let g:ctrlp_buffer_func = { 'enter': 'MyCtrlPMappings' }
+
+func! MyCtrlPMappings()
+  nnoremap <buffer> <silent> <M-d> :call <sid>DeleteBuffer()<cr>
+endfunc
+
+func! s:DeleteBuffer()
+  let line = getline('.')
+  let bufid = line =~ '\[\d\+\*No Name\]$' ? str2nr(matchstr(line, '\d\+'))
+        \ : fnamemodify(line[2:], ':p')
+  exec "bd" bufid
+  exec "norm \<F5>"
+endfunc
+
+
 " =======================
 " === MiniBufExplorer ===
 " =======================

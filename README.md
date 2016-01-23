@@ -198,6 +198,8 @@ Features
   - include hidden files in the results
   - ignore some common dirs and file types
   - open the buffer list with `<leader>+b`
+  - when in buffer list, close the buffers with `<Alt>+d`, as is if you were
+    deleting a line from a normal buffer
   - do not reuse existing buffers (according to the feedback, this is usually
     not what the user would expect)
 
