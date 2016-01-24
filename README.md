@@ -163,7 +163,8 @@ Language support
 Colorschemes
 
 * [Agnostic](https://github.com/ygt-mikekchar/agnostic) - A Vim colour scheme that allows to choose your own colours.
-* [Solarized](https://github.com/altercation/vim-colors-solarized) - Precision colors for machines and people.
+* [Solarized](https://github.com/altercation/vim-colors-solarized) - Precision colours for machines and people.
+* [Flattened](https://github.com/romainl/flattened) - Solarized, without the b\*l\*s\*it.
 
 ### Nice-to-have's
 

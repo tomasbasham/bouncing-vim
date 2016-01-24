@@ -31,6 +31,7 @@ declare -a -r ESSENTIALS=(
   "tpope/vim-sensible"
   "tpope/vim-surround"
   "ygt-mikekchar/agnostic"
+  "romainl/flattened"
 )
 
 declare -a -r NICE_TO_HAVES=(
