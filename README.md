@@ -539,7 +539,7 @@ recommended sections to your own.
 
 * Display line numbers.
 
-* Toggle line numbers with `CTRL-n`.
+* Toggle line numbers with `<F7>`.
 
 * Leave 3 visible lines and columns when scrolling.
 
