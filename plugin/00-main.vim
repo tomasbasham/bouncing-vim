@@ -334,28 +334,29 @@ autocmd BufRead,BufNewFile {.onc} set filetype=json
 " http://stackoverflow.com/questions/8848896/why-do-i-get-syntax-highlighting-for-rspec-only-in-some-projects-in-vim/8849089#8849089
 
 autocmd BufRead *_spec.rb syn keyword rubyRspec
-      \ expect
-      \ describe
-      \ context
-      \ it
-      \ specify
-      \ it_should_behave_like
-      \ before
       \ after
-      \ setup
-      \ subject
-      \ its
-      \ shared_examples_for
-      \ shared_context
-      \ let
-      \ include_examples
-      \ xit
-      \ shared_examples
-      \ raise_error
-      \ instance_double
-      \ object_double
+      \ before
       \ class_double
+      \ context
+      \ describe
+      \ described_class
       \ double
+      \ expect
+      \ include_examples
+      \ instance_double
+      \ it
+      \ it_should_behave_like
+      \ its
+      \ let
+      \ object_double
+      \ raise_error
+      \ setup
+      \ shared_context
+      \ shared_examples
+      \ shared_examples_for
+      \ specify
+      \ subject
+      \ xit
 
 highlight def link rubyRspec Function
 
