@@ -39,6 +39,7 @@ function! <SID>StripTrailingWhitespaces()
 endfun
 
 autocmd FileType Dockerfile   autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
+autocmd FileType make         autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
 autocmd FileType c            autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
 autocmd FileType coffee       autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
 autocmd FileType cpp          autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
