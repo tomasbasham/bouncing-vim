@@ -333,7 +333,7 @@ autocmd BufRead,BufNewFile {.onc} set filetype=json
 "
 " http://stackoverflow.com/questions/8848896/why-do-i-get-syntax-highlighting-for-rspec-only-in-some-projects-in-vim/8849089#8849089
 
-autocmd BufRead *_spec.rb syn keyword rubyRspec
+autocmd BufRead {*_spec.rb,spec_helper.rb} syn keyword rubyRspec
       \ after
       \ before
       \ class_double
@@ -342,6 +342,7 @@ autocmd BufRead *_spec.rb syn keyword rubyRspec
       \ described_class
       \ double
       \ expect
+      \ include_context
       \ include_examples
       \ instance_double
       \ it
