@@ -22,7 +22,7 @@ function! <SID>StripTrailingWhitespaces()
 
   " 2 - Replace three or more consecutive line endings with two line endings (a
   " single blank line).
-  " %s/\n\{3,}/\r\r/e
+  %s/\n\{3,}/\r\r/e
 
   " 3 - Remove extra blank lines at the end of file. Use silent to avoid warning
   " for 'pattern not found'.
