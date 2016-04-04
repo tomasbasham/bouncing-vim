@@ -32,6 +32,7 @@ declare -a -r ESSENTIALS=(
   "tpope/vim-surround"
   "ygt-mikekchar/agnostic"
   "romainl/flattened"
+  "editorconfig/editorconfig-vim"
 )
 
 declare -a -r NICE_TO_HAVES=(
