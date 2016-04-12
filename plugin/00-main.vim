@@ -82,6 +82,9 @@ set expandtab
 " <http://vim.wikia.com/wiki/Omni_completion>
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
+" Allow enter to chose from the omnicompletion window, instead of <C-y>
+" http://vim.wikia.com/wiki/Make_Vim_completion_popup_menu_work_just_like_in_an_IDE
+:inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " ======================
 " === Format options ===

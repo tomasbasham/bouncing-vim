@@ -154,6 +154,7 @@ Functionality
 * [Tabular](https://github.com/godlygeek/tabular) - Vim script for text filtering and alignment.
 * [Ultisnips](https://github.com/SirVer/ultisnips) - An implementation of TextMates Snippets for the Vim Text Editor. Requires Vim compiled with Python support.
 * [vim-snippets](https://github.com/honza/vim-snippets) - vim-snipmate default snippets
+* [editor-config](https://github.com/editorconfig/editorconfig-vim) - EditorConfig plugin for Vim http://editorconfig.org
 
 Language support
 
@@ -285,6 +286,8 @@ Features
   with different conventions).
 
 * Omni-completion is enabled (use the native `<C-x><C-o>` to invoke it).
+  Also, you can use <Enter> to choose the desired entry without creating
+  a new line and staying in insert mode.
 
 ### Miscellaneous mappings
 
