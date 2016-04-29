@@ -148,10 +148,9 @@ func! s:DeleteBuffer()
   let line = getline('.')
   let bufid = line =~ '\[\d\+\*No Name\]$' ? str2nr(matchstr(line, '\d\+'))
         \ : fnamemodify(line[2:], ':p')
-  exec "bd" bufid
+  exec "silent! bd" bufid
   exec "norm \<F5>"
 endfunc
-
 
 " =======================
 " === MiniBufExplorer ===
