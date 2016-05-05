@@ -271,6 +271,9 @@ Features
   - always show the double quotes, the vim-json plugin would hide them but
     that is a confusing and intrusive behaviour
 
+* **XML**
+  - format through `xmllint` with `:Format`
+
 ### Miscellaneous options
 
 * Reduce the timeout required to recognize a command from 1000 ms (the default)
