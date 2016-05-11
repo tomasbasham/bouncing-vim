@@ -350,6 +350,7 @@ autocmd BufRead {*_spec.rb,spec_helper.rb} syn keyword rubyRspec
       \ instance_double
       \ it
       \ it_should_behave_like
+      \ it_behaves_like
       \ its
       \ let
       \ object_double
