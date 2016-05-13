@@ -2,6 +2,7 @@ To do
 
 no doubt
 
+* add leader-r mapping for most recently used buffers
 * check for tmux version when setting the mouse
 * make window name stand out if the exit code
 * <http://vim.wikia.com/wiki/Make_Vim_completion_popup_menu_work_just_like_in_an_IDE>
