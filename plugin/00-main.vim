@@ -330,6 +330,10 @@ autocmd BufRead,BufNewFile {*bash_aliases} set filetype=sh
 " au BufNewFile,BufRead *.mustache set filetype=html
 autocmd BufRead,BufNewFile {.onc} set filetype=json
 
+" Fold coffeescript by indentation:
+" https://github.com/kchmck/vim-coffee-script#fold-by-indentation
+autocmd BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
+
 " ========================================================
 " === RSpec syntax highlighting outside Rails projects ===
 " ========================================================
