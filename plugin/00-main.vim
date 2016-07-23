@@ -308,10 +308,28 @@ let g:markdown_fenced_languages = [
 " ====================
 " === fatih/vim-go ===
 " ====================
-"
 " Vim plugin for golang.
+"
+" Enable goimports to automatically insert import paths instead of gofmt
 let g:go_fmt_command = "goimports"
 let g:go_snippet_engine = "ultisnips"
+
+" Enable syntax-highlighting for Functions, Methods and Structs (disabled by default).
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_types = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+
+" Sometimes when using both vim-go and syntastic Vim will start lagging while
+" saving and opening files. The following fixes this.
+let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+" let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+" Another issue with vim-go and syntastic is that the location list window
+" that contains the output of commands such as :GoBuild and :GoTest might
+" not appear. To resolve this:
+let g:go_list_type = "quickfix"
 
 " ===============================
 " === Filetype customizations ===
