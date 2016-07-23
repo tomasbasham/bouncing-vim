@@ -270,6 +270,7 @@ Features
 * **JSON**
   - always show the double quotes, the vim-json plugin would hide them but
     that is a confusing and intrusive behaviour
+  - format through Python with `:Format`
 
 * **XML**
   - format through `xmllint` with `:Format`
