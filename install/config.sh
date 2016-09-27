@@ -31,11 +31,11 @@ declare -a -r ESSENTIALS=(
   "tpope/vim-sensible"
   "tpope/vim-surround"
   "ygt-mikekchar/agnostic"
-  "romainl/flattened"
   "editorconfig/editorconfig-vim"
 )
 
 declare -a -r NICE_TO_HAVES=(
+  "romainl/flattened"
   "benmills/vimux"
   "chriskempson/base16-vim"
   "ekalinin/Dockerfile.vim"
@@ -52,5 +52,4 @@ declare -a -r NICE_TO_HAVES=(
   "tomasr/molokai"
   "tpope/vim-rails"
   "vim-ruby/vim-ruby"
-  "jwhitley/vim-literate-coffeescript"
 )
