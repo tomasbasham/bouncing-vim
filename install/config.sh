@@ -52,4 +52,5 @@ declare -a -r NICE_TO_HAVES=(
   "tomasr/molokai"
   "tpope/vim-rails"
   "vim-ruby/vim-ruby"
+  "lambdatoast/elm.vim.git"
 )
