@@ -54,4 +54,5 @@ declare -a -r NICE_TO_HAVES=(
   "vim-ruby/vim-ruby"
   "leafgarland/typescript-vim"
   "elixir-lang/vim-elixir"
+  "lambdatoast/elm.vim"
 )
