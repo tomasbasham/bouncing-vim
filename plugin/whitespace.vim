@@ -38,6 +38,6 @@ function! <SID>StripTrailingWhitespaces()
   call cursor(l, c)
 endfun
 
-autocmd FileType Dockerfile,make,c,coffee,cpp,css,eruby,html,java,javascript,json,markdown,php,puppet,python,ruby,scss,sh,sql,text,vim,yaml autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
+autocmd FileType Dockerfile,make,c,coffee,cpp,css,eruby,eelixir,elixir,html,java,javascript,json,markdown,php,puppet,python,ruby,scss,sh,sql,text,typescript,vim,yaml autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
 " Conflicts with the same functionality provided by gofmt + fatih/vim-go
 " autocmd FileType go           autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
