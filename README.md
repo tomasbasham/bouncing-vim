@@ -184,6 +184,8 @@ These are only installed when running the full install: `./install/full`
 * [vim-go](https://github.com/fatih/vim-go) - Full featured Go development environment. This plugin will create the executable it needs, if the golang runtime is available, the first time Vim is run. This might take a couple of minutes.
 * [vim-ruby-xmpfilter](https://github.com/t9md/vim-ruby-xmpfilter) - Helper for ruby's xmpfilter or seeing_is_believing. Evaluates Ruby code inline and print the result as a comment at the end of the line.
 * [Vimux](https://github.com/benmills/vimux) - Easily interact with tmux from Vim.
+* [typescript-vim](https://github.com/leafgarland/typescript-vim) - Typescript syntax files for Vim.
+* [elixir-lang/vim-elixir](https://github.com/elixir-lang/vim-elixir) - Vim configuration files for Elixir.
 
 Colorschemes:
 
