@@ -52,4 +52,7 @@ declare -a -r NICE_TO_HAVES=(
   "tomasr/molokai"
   "tpope/vim-rails"
   "vim-ruby/vim-ruby"
+  "leafgarland/typescript-vim"
+  "elixir-lang/vim-elixir"
+  "ElmCast/elm-vim"
 )
