@@ -292,17 +292,18 @@ let g:markdown_fenced_languages = [
 \ 'coffee',
 \ 'css',
 \ 'erb=eruby',
+\ 'go',
+\ 'html',
 \ 'javascript',
 \ 'js=javascript',
+\ 'json',
 \ 'json=javascript',
 \ 'ruby',
 \ 'sass',
-\ 'xml',
 \ 'sh',
-\ 'yaml',
-\ 'go',
 \ 'sql',
-\ 'json'
+\ 'xml',
+\ 'yaml',
 \]
 
 " ====================
