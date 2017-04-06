@@ -186,6 +186,8 @@ These are only installed when running the full install: `./install/full`
 * [Vimux](https://github.com/benmills/vimux) - Easily interact with tmux from Vim.
 * [typescript-vim](https://github.com/leafgarland/typescript-vim) - Typescript syntax files for Vim.
 * [elixir-lang/vim-elixir](https://github.com/elixir-lang/vim-elixir) - Vim configuration files for Elixir.
+* [ElmCast/elm-vim](https://github.com/ElmCast/elm-vim)
+* [Rainbow Parentheses](https://github.com/luochen1990/rainbow)
 
 Colorschemes:
 

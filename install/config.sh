@@ -55,4 +55,5 @@ declare -a -r NICE_TO_HAVES=(
   "leafgarland/typescript-vim"
   "elixir-lang/vim-elixir"
   "ElmCast/elm-vim"
+  "luochen1990/rainbow"
 )
