@@ -155,6 +155,7 @@ Functionality
 * [Ultisnips](https://github.com/SirVer/ultisnips) - An implementation of TextMates Snippets for the Vim Text Editor. Requires Vim compiled with Python support.
 * [vim-snippets](https://github.com/honza/vim-snippets) - vim-snipmate default snippets
 * [editor-config](https://github.com/editorconfig/editorconfig-vim) - EditorConfig plugin for Vim http://editorconfig.org
+* [vim-javascript](https://github.com/pangloss/vim-javascript) - Vastly improved Javascript indentation and syntax support in Vim.
 
 Language support
 
