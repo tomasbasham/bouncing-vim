@@ -155,6 +155,7 @@ Functionality
 * [Ultisnips](https://github.com/SirVer/ultisnips) - An implementation of TextMates Snippets for the Vim Text Editor. Requires Vim compiled with Python support.
 * [vim-snippets](https://github.com/honza/vim-snippets) - vim-snipmate default snippets
 * [editor-config](https://github.com/editorconfig/editorconfig-vim) - EditorConfig plugin for Vim http://editorconfig.org
+* [vim-javascript](https://github.com/pangloss/vim-javascript) - Vastly improved Javascript indentation and syntax support in Vim.
 
 Language support
 
@@ -186,6 +187,8 @@ These are only installed when running the full install: `./install/full`
 * [Vimux](https://github.com/benmills/vimux) - Easily interact with tmux from Vim.
 * [typescript-vim](https://github.com/leafgarland/typescript-vim) - Typescript syntax files for Vim.
 * [elixir-lang/vim-elixir](https://github.com/elixir-lang/vim-elixir) - Vim configuration files for Elixir.
+* [ElmCast/elm-vim](https://github.com/ElmCast/elm-vim)
+* [Rainbow Parentheses](https://github.com/luochen1990/rainbow)
 
 Colorschemes:
 

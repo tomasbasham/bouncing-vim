@@ -292,17 +292,18 @@ let g:markdown_fenced_languages = [
 \ 'coffee',
 \ 'css',
 \ 'erb=eruby',
+\ 'go',
+\ 'html',
 \ 'javascript',
 \ 'js=javascript',
+\ 'json',
 \ 'json=javascript',
 \ 'ruby',
 \ 'sass',
-\ 'xml',
 \ 'sh',
-\ 'yaml',
-\ 'go',
 \ 'sql',
-\ 'json'
+\ 'xml',
+\ 'yaml',
 \]
 
 " ====================
@@ -406,3 +407,9 @@ autocmd ColorScheme * highlight MBEVisibleChanged ctermfg=14
 autocmd ColorScheme * highlight MBEVisibleActiveNormal ctermfg=0
 " ...CHANGED, VISIBLE and ACTIVE
 autocmd ColorScheme * highlight MBEVisibleActiveChanged ctermfg=0
+
+" ===========================
+" === Rainbow Parentheses ===
+" ===========================
+" Don't activate it by default.
+let g:rainbow_active = 0
