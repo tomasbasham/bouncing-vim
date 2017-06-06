@@ -2,6 +2,9 @@ To do
 
 no doubt
 
+* ci //
+* ci ||
+* add nerd bar
 * add leader-r mapping for most recently used buffers
 * check for tmux version when setting the mouse
 * make window name stand out if the exit code
