@@ -187,6 +187,7 @@ map <Leader>f :NERDTreeFind<CR>
 let NERDTreeIgnore = ['\.pyc$', '\.class$']
 let NERDTreeMinimalUI=1
 let NERDTreeAutoDeleteBuffer=1 " Remove buffer without second confirmation when file is deleted/moved.
+let NERDTreeShowHidden=1 " Show hidden files at startup
 
 " Other options useful in the past
 " let NERDTreeShowHidden=1
